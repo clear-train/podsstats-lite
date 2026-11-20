@@ -1,0 +1,4941 @@
+{
+  "days" : [
+    {
+      "avgDB" : 75.99541249524776,
+      "date" : "2026-10-06T16:00:00Z",
+      "duration" : 7891,
+      "loudDuration" : 1557,
+      "maxDB" : 94.3,
+      "sessionCount" : 4
+    },
+    {
+      "avgDB" : 62.70504977636706,
+      "date" : "2026-10-07T16:00:00Z",
+      "duration" : 6931,
+      "loudDuration" : 312,
+      "maxDB" : 87.6,
+      "sessionCount" : 4
+    },
+    {
+      "avgDB" : 66.83169437927167,
+      "date" : "2026-10-08T16:00:00Z",
+      "duration" : 9803,
+      "loudDuration" : 376,
+      "maxDB" : 88.3,
+      "sessionCount" : 6
+    },
+    {
+      "avgDB" : 66.34506302521008,
+      "date" : "2026-10-09T16:00:00Z",
+      "duration" : 1904,
+      "loudDuration" : 0,
+      "maxDB" : 74.8,
+      "sessionCount" : 1
+    },
+    {
+      "avgDB" : 67.93954512105648,
+      "date" : "2026-10-10T16:00:00Z",
+      "duration" : 5452,
+      "loudDuration" : 577,
+      "maxDB" : 98.1,
+      "sessionCount" : 4
+    },
+    {
+      "avgDB" : 74.30476900149031,
+      "date" : "2026-10-11T16:00:00Z",
+      "duration" : 6710,
+      "loudDuration" : 1361,
+      "maxDB" : 97.5,
+      "sessionCount" : 4
+    },
+    {
+      "avgDB" : 66.29193231011412,
+      "date" : "2026-10-15T16:00:00Z",
+      "duration" : 2541,
+      "loudDuration" : 0,
+      "maxDB" : 72.8,
+      "sessionCount" : 2
+    },
+    {
+      "avgDB" : 67.2771431992337,
+      "date" : "2026-10-16T16:00:00Z",
+      "duration" : 8352,
+      "loudDuration" : 793,
+      "maxDB" : 100,
+      "sessionCount" : 5
+    },
+    {
+      "avgDB" : 71.85274476513864,
+      "date" : "2026-10-17T16:00:00Z",
+      "duration" : 1767,
+      "loudDuration" : 250,
+      "maxDB" : 80.4,
+      "sessionCount" : 2
+    },
+    {
+      "avgDB" : 62.44137777777778,
+      "date" : "2026-10-18T16:00:00Z",
+      "duration" : 4500,
+      "loudDuration" : 0,
+      "maxDB" : 78.6,
+      "sessionCount" : 2
+    },
+    {
+      "avgDB" : 71.60527859237536,
+      "date" : "2026-10-19T16:00:00Z",
+      "duration" : 3069,
+      "loudDuration" : 267,
+      "maxDB" : 93.6,
+      "sessionCount" : 3
+    },
+    {
+      "avgDB" : 74.73949074074075,
+      "date" : "2026-10-20T16:00:00Z",
+      "duration" : 2160,
+      "loudDuration" : 222,
+      "maxDB" : 93.7,
+      "sessionCount" : 1
+    },
+    {
+      "avgDB" : 71.43968253968255,
+      "date" : "2026-10-21T16:00:00Z",
+      "duration" : 5922,
+      "loudDuration" : 1056,
+      "maxDB" : 90.4,
+      "sessionCount" : 5
+    },
+    {
+      "avgDB" : 72.76981903093989,
+      "date" : "2026-10-22T16:00:00Z",
+      "duration" : 1713,
+      "loudDuration" : 0,
+      "maxDB" : 78.4,
+      "sessionCount" : 2
+    },
+    {
+      "avgDB" : 71.73074204946997,
+      "date" : "2026-10-23T16:00:00Z",
+      "duration" : 3679,
+      "loudDuration" : 227,
+      "maxDB" : 84.1,
+      "sessionCount" : 3
+    },
+    {
+      "avgDB" : 74.4135930264233,
+      "date" : "2026-10-24T16:00:00Z",
+      "duration" : 3671,
+      "loudDuration" : 265,
+      "maxDB" : 80.9,
+      "sessionCount" : 2
+    },
+    {
+      "avgDB" : 63.44912531238843,
+      "date" : "2026-10-25T16:00:00Z",
+      "duration" : 2801,
+      "loudDuration" : 0,
+      "maxDB" : 70.8,
+      "sessionCount" : 3
+    },
+    {
+      "avgDB" : 69.93186813186813,
+      "date" : "2026-10-26T16:00:00Z",
+      "duration" : 4914,
+      "loudDuration" : 176,
+      "maxDB" : 92.6,
+      "sessionCount" : 3
+    },
+    {
+      "avgDB" : 71.50898386393371,
+      "date" : "2026-10-27T16:00:00Z",
+      "duration" : 4586,
+      "loudDuration" : 688,
+      "maxDB" : 94.8,
+      "sessionCount" : 4
+    },
+    {
+      "avgDB" : 64.48275613275614,
+      "date" : "2026-10-30T16:00:00Z",
+      "duration" : 1386,
+      "loudDuration" : 128,
+      "maxDB" : 82.8,
+      "sessionCount" : 2
+    },
+    {
+      "avgDB" : 76.8716040462428,
+      "date" : "2026-10-31T16:00:00Z",
+      "duration" : 2768,
+      "loudDuration" : 752,
+      "maxDB" : 89.4,
+      "sessionCount" : 4
+    },
+    {
+      "avgDB" : 60.548425925925926,
+      "date" : "2026-11-01T16:00:00Z",
+      "duration" : 3240,
+      "loudDuration" : 127,
+      "maxDB" : 83.6,
+      "sessionCount" : 1
+    },
+    {
+      "avgDB" : 68.52014012738853,
+      "date" : "2026-11-02T16:00:00Z",
+      "duration" : 7850,
+      "loudDuration" : 855,
+      "maxDB" : 82.5,
+      "sessionCount" : 7
+    },
+    {
+      "avgDB" : 68.37819700171043,
+      "date" : "2026-11-03T16:00:00Z",
+      "duration" : 9939,
+      "loudDuration" : 1078,
+      "maxDB" : 85.1,
+      "sessionCount" : 5
+    },
+    {
+      "avgDB" : 65.31746713852375,
+      "date" : "2026-11-04T16:00:00Z",
+      "duration" : 3956,
+      "loudDuration" : 0,
+      "maxDB" : 76.1,
+      "sessionCount" : 3
+    },
+    {
+      "avgDB" : 70.49309542280837,
+      "date" : "2026-11-05T16:00:00Z",
+      "duration" : 1289,
+      "loudDuration" : 191,
+      "maxDB" : 86.3,
+      "sessionCount" : 2
+    },
+    {
+      "avgDB" : 65.19140398705059,
+      "date" : "2026-11-06T16:00:00Z",
+      "duration" : 11738,
+      "loudDuration" : 560,
+      "maxDB" : 89.6,
+      "sessionCount" : 8
+    },
+    {
+      "avgDB" : 74.09185897435897,
+      "date" : "2026-11-07T16:00:00Z",
+      "duration" : 1560,
+      "loudDuration" : 207,
+      "maxDB" : 80.4,
+      "sessionCount" : 1
+    },
+    {
+      "avgDB" : 69.99436985708098,
+      "date" : "2026-11-08T16:00:00Z",
+      "duration" : 2309,
+      "loudDuration" : 0,
+      "maxDB" : 79.2,
+      "sessionCount" : 2
+    },
+    {
+      "avgDB" : 67.21270127706829,
+      "date" : "2026-11-09T16:00:00Z",
+      "duration" : 7204,
+      "loudDuration" : 829,
+      "maxDB" : 96.3,
+      "sessionCount" : 5
+    },
+    {
+      "avgDB" : 71.19574677320223,
+      "date" : "2026-11-10T16:00:00Z",
+      "duration" : 8135,
+      "loudDuration" : 649,
+      "maxDB" : 92.4,
+      "sessionCount" : 4
+    },
+    {
+      "avgDB" : 68.66376543209877,
+      "date" : "2026-11-11T16:00:00Z",
+      "duration" : 3240,
+      "loudDuration" : 0,
+      "maxDB" : 77.2,
+      "sessionCount" : 2
+    },
+    {
+      "avgDB" : 71.23043310131479,
+      "date" : "2026-11-13T16:00:00Z",
+      "duration" : 5172,
+      "loudDuration" : 350,
+      "maxDB" : 95.7,
+      "sessionCount" : 3
+    },
+    {
+      "avgDB" : 72.33145539906104,
+      "date" : "2026-11-14T16:00:00Z",
+      "duration" : 639,
+      "loudDuration" : 119,
+      "maxDB" : 82,
+      "sessionCount" : 2
+    },
+    {
+      "avgDB" : 62.54865525672373,
+      "date" : "2026-11-15T16:00:00Z",
+      "duration" : 2454,
+      "loudDuration" : 0,
+      "maxDB" : 74.4,
+      "sessionCount" : 2
+    },
+    {
+      "avgDB" : 65.08837391987431,
+      "date" : "2026-11-16T16:00:00Z",
+      "duration" : 2546,
+      "loudDuration" : 178,
+      "maxDB" : 92.4,
+      "sessionCount" : 3
+    },
+    {
+      "avgDB" : 72.98145263827082,
+      "date" : "2026-11-17T16:00:00Z",
+      "duration" : 6292,
+      "loudDuration" : 1172,
+      "maxDB" : 93.1,
+      "sessionCount" : 3
+    },
+    {
+      "avgDB" : 72.49993722536094,
+      "date" : "2026-11-18T16:00:00Z",
+      "duration" : 9558,
+      "loudDuration" : 1501,
+      "maxDB" : 100,
+      "sessionCount" : 7
+    },
+    {
+      "avgDB" : 66.32944385512957,
+      "date" : "2026-11-19T16:00:00Z",
+      "duration" : 6599,
+      "loudDuration" : 0,
+      "maxDB" : 77,
+      "sessionCount" : 6
+    }
+  ],
+  "dbHistogram" : [
+    {
+      "duration" : 0,
+      "lower" : 40,
+      "upper" : 45
+    },
+    {
+      "duration" : 0,
+      "lower" : 45,
+      "upper" : 50
+    },
+    {
+      "duration" : 5169,
+      "lower" : 50,
+      "upper" : 55
+    },
+    {
+      "duration" : 19704,
+      "lower" : 55,
+      "upper" : 60
+    },
+    {
+      "duration" : 36548,
+      "lower" : 60,
+      "upper" : 65
+    },
+    {
+      "duration" : 43501,
+      "lower" : 65,
+      "upper" : 70
+    },
+    {
+      "duration" : 39115,
+      "lower" : 70,
+      "upper" : 75
+    },
+    {
+      "duration" : 25380,
+      "lower" : 75,
+      "upper" : 80
+    },
+    {
+      "duration" : 12123,
+      "lower" : 80,
+      "upper" : 85
+    },
+    {
+      "duration" : 2009,
+      "lower" : 85,
+      "upper" : 90
+    },
+    {
+      "duration" : 1691,
+      "lower" : 90,
+      "upper" : 95
+    },
+    {
+      "duration" : 1000,
+      "lower" : 95,
+      "upper" : 100
+    }
+  ],
+  "hours" : [
+    {
+      "duration" : 3776,
+      "hour" : 8,
+      "sessionCount" : 0,
+      "weekday" : 1
+    },
+    {
+      "duration" : 5759,
+      "hour" : 9,
+      "sessionCount" : 0,
+      "weekday" : 1
+    },
+    {
+      "duration" : 4345,
+      "hour" : 12,
+      "sessionCount" : 0,
+      "weekday" : 1
+    },
+    {
+      "duration" : 1977,
+      "hour" : 14,
+      "sessionCount" : 0,
+      "weekday" : 1
+    },
+    {
+      "duration" : 7405,
+      "hour" : 8,
+      "sessionCount" : 0,
+      "weekday" : 2
+    },
+    {
+      "duration" : 4737,
+      "hour" : 10,
+      "sessionCount" : 0,
+      "weekday" : 2
+    },
+    {
+      "duration" : 183,
+      "hour" : 11,
+      "sessionCount" : 0,
+      "weekday" : 2
+    },
+    {
+      "duration" : 3628,
+      "hour" : 12,
+      "sessionCount" : 0,
+      "weekday" : 2
+    },
+    {
+      "duration" : 4488,
+      "hour" : 13,
+      "sessionCount" : 0,
+      "weekday" : 2
+    },
+    {
+      "duration" : 1573,
+      "hour" : 17,
+      "sessionCount" : 0,
+      "weekday" : 2
+    },
+    {
+      "duration" : 1260,
+      "hour" : 8,
+      "sessionCount" : 0,
+      "weekday" : 3
+    },
+    {
+      "duration" : 7782,
+      "hour" : 9,
+      "sessionCount" : 0,
+      "weekday" : 3
+    },
+    {
+      "duration" : 1846,
+      "hour" : 10,
+      "sessionCount" : 0,
+      "weekday" : 3
+    },
+    {
+      "duration" : 7930,
+      "hour" : 12,
+      "sessionCount" : 0,
+      "weekday" : 3
+    },
+    {
+      "duration" : 700,
+      "hour" : 13,
+      "sessionCount" : 0,
+      "weekday" : 3
+    },
+    {
+      "duration" : 5045,
+      "hour" : 17,
+      "sessionCount" : 0,
+      "weekday" : 3
+    },
+    {
+      "duration" : 1020,
+      "hour" : 18,
+      "sessionCount" : 0,
+      "weekday" : 3
+    },
+    {
+      "duration" : 4571,
+      "hour" : 9,
+      "sessionCount" : 0,
+      "weekday" : 4
+    },
+    {
+      "duration" : 8284,
+      "hour" : 10,
+      "sessionCount" : 0,
+      "weekday" : 4
+    },
+    {
+      "duration" : 1206,
+      "hour" : 11,
+      "sessionCount" : 0,
+      "weekday" : 4
+    },
+    {
+      "duration" : 3480,
+      "hour" : 12,
+      "sessionCount" : 0,
+      "weekday" : 4
+    },
+    {
+      "duration" : 5103,
+      "hour" : 13,
+      "sessionCount" : 0,
+      "weekday" : 4
+    },
+    {
+      "duration" : 2223,
+      "hour" : 16,
+      "sessionCount" : 0,
+      "weekday" : 4
+    },
+    {
+      "duration" : 4331,
+      "hour" : 17,
+      "sessionCount" : 0,
+      "weekday" : 4
+    },
+    {
+      "duration" : 8025,
+      "hour" : 18,
+      "sessionCount" : 0,
+      "weekday" : 4
+    },
+    {
+      "duration" : 1780,
+      "hour" : 19,
+      "sessionCount" : 0,
+      "weekday" : 4
+    },
+    {
+      "duration" : 4962,
+      "hour" : 8,
+      "sessionCount" : 0,
+      "weekday" : 5
+    },
+    {
+      "duration" : 3727,
+      "hour" : 9,
+      "sessionCount" : 0,
+      "weekday" : 5
+    },
+    {
+      "duration" : 3187,
+      "hour" : 10,
+      "sessionCount" : 0,
+      "weekday" : 5
+    },
+    {
+      "duration" : 5243,
+      "hour" : 12,
+      "sessionCount" : 0,
+      "weekday" : 5
+    },
+    {
+      "duration" : 3879,
+      "hour" : 13,
+      "sessionCount" : 0,
+      "weekday" : 5
+    },
+    {
+      "duration" : 3030,
+      "hour" : 14,
+      "sessionCount" : 0,
+      "weekday" : 5
+    },
+    {
+      "duration" : 3156,
+      "hour" : 15,
+      "sessionCount" : 0,
+      "weekday" : 5
+    },
+    {
+      "duration" : 2423,
+      "hour" : 16,
+      "sessionCount" : 0,
+      "weekday" : 5
+    },
+    {
+      "duration" : 1713,
+      "hour" : 8,
+      "sessionCount" : 0,
+      "weekday" : 6
+    },
+    {
+      "duration" : 5846,
+      "hour" : 9,
+      "sessionCount" : 0,
+      "weekday" : 6
+    },
+    {
+      "duration" : 2568,
+      "hour" : 10,
+      "sessionCount" : 0,
+      "weekday" : 6
+    },
+    {
+      "duration" : 725,
+      "hour" : 11,
+      "sessionCount" : 0,
+      "weekday" : 6
+    },
+    {
+      "duration" : 1920,
+      "hour" : 12,
+      "sessionCount" : 0,
+      "weekday" : 6
+    },
+    {
+      "duration" : 2600,
+      "hour" : 13,
+      "sessionCount" : 0,
+      "weekday" : 6
+    },
+    {
+      "duration" : 2495,
+      "hour" : 14,
+      "sessionCount" : 0,
+      "weekday" : 6
+    },
+    {
+      "duration" : 449,
+      "hour" : 15,
+      "sessionCount" : 0,
+      "weekday" : 6
+    },
+    {
+      "duration" : 2343,
+      "hour" : 18,
+      "sessionCount" : 0,
+      "weekday" : 6
+    },
+    {
+      "duration" : 1286,
+      "hour" : 19,
+      "sessionCount" : 0,
+      "weekday" : 6
+    },
+    {
+      "duration" : 7058,
+      "hour" : 9,
+      "sessionCount" : 0,
+      "weekday" : 7
+    },
+    {
+      "duration" : 4152,
+      "hour" : 10,
+      "sessionCount" : 0,
+      "weekday" : 7
+    },
+    {
+      "duration" : 6246,
+      "hour" : 13,
+      "sessionCount" : 0,
+      "weekday" : 7
+    },
+    {
+      "duration" : 2172,
+      "hour" : 14,
+      "sessionCount" : 0,
+      "weekday" : 7
+    },
+    {
+      "duration" : 5426,
+      "hour" : 15,
+      "sessionCount" : 0,
+      "weekday" : 7
+    },
+    {
+      "duration" : 1327,
+      "hour" : 16,
+      "sessionCount" : 0,
+      "weekday" : 7
+    },
+    {
+      "duration" : 2686,
+      "hour" : 18,
+      "sessionCount" : 0,
+      "weekday" : 7
+    },
+    {
+      "duration" : 26,
+      "hour" : 19,
+      "sessionCount" : 0,
+      "weekday" : 7
+    },
+    {
+      "duration" : 2644,
+      "hour" : 21,
+      "sessionCount" : 0,
+      "weekday" : 7
+    },
+    {
+      "duration" : 494,
+      "hour" : 22,
+      "sessionCount" : 0,
+      "weekday" : 7
+    }
+  ],
+  "optionsDescription" : {
+    "gap" : "300"
+  },
+  "sessions" : [
+    {
+      "avgDB" : 75.49406885109913,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        0,
+        0,
+        494,
+        661,
+        757,
+        499,
+        0,
+        0,
+        0
+      ],
+      "duration" : 2411,
+      "end" : "2026-10-07T01:45:24Z",
+      "loudDuration" : 499,
+      "maxDB" : 83.2,
+      "sampleCount" : 21,
+      "source" : "WH-1000XM5",
+      "spans" : [
+        {
+          "end" : "2026-10-07T01:01:42Z",
+          "start" : "2026-10-07T01:00:32Z"
+        },
+        {
+          "end" : "2026-10-07T01:45:24Z",
+          "start" : "2026-10-07T01:06:23Z"
+        }
+      ],
+      "start" : "2026-10-07T01:00:32Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 76.38633333333334,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        494,
+        880,
+        126,
+        0,
+        0,
+        0
+      ],
+      "duration" : 1500,
+      "end" : "2026-10-07T04:27:23Z",
+      "loudDuration" : 126,
+      "maxDB" : 80.5,
+      "sampleCount" : 13,
+      "source" : "AirPods Max",
+      "spans" : [
+        {
+          "end" : "2026-10-07T04:27:23Z",
+          "start" : "2026-10-07T04:02:23Z"
+        }
+      ],
+      "start" : "2026-10-07T04:02:23Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 75.22631578947369,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        665,
+        525,
+        121,
+        0,
+        0,
+        0
+      ],
+      "duration" : 1311,
+      "end" : "2026-10-07T10:30:14Z",
+      "loudDuration" : 121,
+      "maxDB" : 81.1,
+      "sampleCount" : 10,
+      "source" : "AirPods Pro",
+      "spans" : [
+        {
+          "end" : "2026-10-07T10:30:14Z",
+          "start" : "2026-10-07T10:08:23Z"
+        }
+      ],
+      "start" : "2026-10-07T10:08:23Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 76.60636942675158,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        0,
+        0,
+        265,
+        767,
+        826,
+        713,
+        0,
+        98,
+        0
+      ],
+      "duration" : 2669,
+      "end" : "2026-10-07T11:23:23Z",
+      "loudDuration" : 811,
+      "maxDB" : 94.3,
+      "sampleCount" : 24,
+      "source" : "AirPods Pro",
+      "spans" : [
+        {
+          "end" : "2026-10-07T11:23:23Z",
+          "start" : "2026-10-07T10:38:54Z"
+        }
+      ],
+      "start" : "2026-10-07T10:38:54Z",
+      "veryLoudDuration" : 98
+    },
+    {
+      "avgDB" : 56.96704621567314,
+      "dbBuckets" : [
+        0,
+        0,
+        1177,
+        1163,
+        380,
+        266,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "duration" : 2986,
+      "end" : "2026-10-08T00:56:27Z",
+      "loudDuration" : 0,
+      "maxDB" : 67.1,
+      "sampleCount" : 26,
+      "source" : "AirPods Pro",
+      "spans" : [
+        {
+          "end" : "2026-10-08T00:11:01Z",
+          "start" : "2026-10-08T00:02:27Z"
+        },
+        {
+          "end" : "2026-10-08T00:56:27Z",
+          "start" : "2026-10-08T00:15:15Z"
+        }
+      ],
+      "start" : "2026-10-08T00:02:27Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 73.47768130745658,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        0,
+        0,
+        518,
+        708,
+        420,
+        240,
+        72,
+        0,
+        0
+      ],
+      "duration" : 1958,
+      "end" : "2026-10-08T05:42:39Z",
+      "loudDuration" : 312,
+      "maxDB" : 87.6,
+      "sampleCount" : 17,
+      "source" : "AirPods Pro",
+      "spans" : [
+        {
+          "end" : "2026-10-08T05:42:39Z",
+          "start" : "2026-10-08T05:10:01Z"
+        }
+      ],
+      "start" : "2026-10-08T05:10:01Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 76.9,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        61,
+        0,
+        0,
+        0,
+        0
+      ],
+      "duration" : 61,
+      "end" : "2026-10-08T05:56:01Z",
+      "loudDuration" : 0,
+      "maxDB" : 76.9,
+      "sampleCount" : 1,
+      "source" : "AirPods Pro",
+      "spans" : [
+        {
+          "end" : "2026-10-08T05:56:01Z",
+          "start" : "2026-10-08T05:55:00Z"
+        }
+      ],
+      "start" : "2026-10-08T05:55:00Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 60.199844236760136,
+      "dbBuckets" : [
+        0,
+        0,
+        460,
+        451,
+        643,
+        372,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "duration" : 1926,
+      "end" : "2026-10-08T06:48:45Z",
+      "loudDuration" : 0,
+      "maxDB" : 67.9,
+      "sampleCount" : 17,
+      "source" : "WH-1000XM5",
+      "spans" : [
+        {
+          "end" : "2026-10-08T06:35:15Z",
+          "start" : "2026-10-08T06:11:45Z"
+        },
+        {
+          "end" : "2026-10-08T06:39:49Z",
+          "start" : "2026-10-08T06:37:20Z"
+        },
+        {
+          "end" : "2026-10-08T06:48:45Z",
+          "start" : "2026-10-08T06:42:38Z"
+        }
+      ],
+      "start" : "2026-10-08T06:11:45Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 66.64993288590604,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        96,
+        553,
+        426,
+        346,
+        69,
+        0,
+        0,
+        0,
+        0
+      ],
+      "duration" : 1490,
+      "end" : "2026-10-09T01:37:04Z",
+      "loudDuration" : 0,
+      "maxDB" : 76.2,
+      "sampleCount" : 13,
+      "source" : "WH-1000XM5",
+      "spans" : [
+        {
+          "end" : "2026-10-09T01:37:04Z",
+          "start" : "2026-10-09T01:12:14Z"
+        }
+      ],
+      "start" : "2026-10-09T01:12:14Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 68.03640142517816,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        0,
+        452,
+        609,
+        623,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "duration" : 1684,
+      "end" : "2026-10-09T02:11:14Z",
+      "loudDuration" : 0,
+      "maxDB" : 73.5,
+      "sampleCount" : 14,
+      "source" : "WH-1000XM5",
+      "spans" : [
+        {
+          "end" : "2026-10-09T02:11:14Z",
+          "start" : "2026-10-09T01:43:10Z"
+        }
+      ],
+      "start" : "2026-10-09T01:43:10Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 71.18150000000001,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        0,
+        414,
+        1009,
+        978,
+        354,
+        111,
+        134,
+        0,
+        0
+      ],
+      "duration" : 3000,
+      "end" : "2026-10-09T06:06:40Z",
+      "loudDuration" : 245,
+      "maxDB" : 88.3,
+      "sampleCount" : 26,
+      "source" : "WH-1000XM5",
+      "spans" : [
+        {
+          "end" : "2026-10-09T06:06:40Z",
+          "start" : "2026-10-09T05:16:40Z"
+        }
+      ],
+      "start" : "2026-10-09T05:16:40Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 66.16579545454546,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        142,
+        254,
+        353,
+        0,
+        0,
+        0,
+        131,
+        0,
+        0
+      ],
+      "duration" : 880,
+      "end" : "2026-10-09T10:25:33Z",
+      "loudDuration" : 131,
+      "maxDB" : 85.2,
+      "sampleCount" : 7,
+      "source" : "WH-1000XM5",
+      "spans" : [
+        {
+          "end" : "2026-10-09T10:25:33Z",
+          "start" : "2026-10-09T10:10:53Z"
+        }
+      ],
+      "start" : "2026-10-09T10:10:53Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 62.1866225165563,
+      "dbBuckets" : [
+        0,
+        0,
+        286,
+        345,
+        729,
+        839,
+        66,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "duration" : 2265,
+      "end" : "2026-10-09T11:13:22Z",
+      "loudDuration" : 0,
+      "maxDB" : 73.5,
+      "sampleCount" : 19,
+      "source" : "WH-1000XM5",
+      "spans" : [
+        {
+          "end" : "2026-10-09T11:13:22Z",
+          "start" : "2026-10-09T10:35:37Z"
+        }
+      ],
+      "start" : "2026-10-09T10:35:37Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 59.18657024793389,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        325,
+        159,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "duration" : 484,
+      "end" : "2026-10-09T11:33:53Z",
+      "loudDuration" : 0,
+      "maxDB" : 63.2,
+      "sampleCount" : 4,
+      "source" : "WH-1000XM5",
+      "spans" : [
+        {
+          "end" : "2026-10-09T11:33:53Z",
+          "start" : "2026-10-09T11:25:49Z"
+        }
+      ],
+      "start" : "2026-10-09T11:25:49Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 66.34506302521008,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        67,
+        694,
+        664,
+        479,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "duration" : 1904,
+      "end" : "2026-10-10T01:41:56Z",
+      "loudDuration" : 0,
+      "maxDB" : 74.8,
+      "sampleCount" : 18,
+      "source" : "AirPods Max",
+      "spans" : [
+        {
+          "end" : "2026-10-10T01:41:56Z",
+          "start" : "2026-10-10T01:10:12Z"
+        }
+      ],
+      "start" : "2026-10-10T01:10:12Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 77.42360108303247,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        0,
+        0,
+        205,
+        813,
+        738,
+        313,
+        0,
+        0,
+        147
+      ],
+      "duration" : 2216,
+      "end" : "2026-10-11T00:43:13Z",
+      "loudDuration" : 460,
+      "maxDB" : 98.1,
+      "sampleCount" : 17,
+      "source" : "AirPods Pro",
+      "spans" : [
+        {
+          "end" : "2026-10-11T00:40:01Z",
+          "start" : "2026-10-11T00:04:13Z"
+        },
+        {
+          "end" : "2026-10-11T00:43:13Z",
+          "start" : "2026-10-11T00:42:05Z"
+        }
+      ],
+      "start" : "2026-10-11T00:04:13Z",
+      "veryLoudDuration" : 147
+    },
+    {
+      "avgDB" : 55.73566322478157,
+      "dbBuckets" : [
+        0,
+        0,
+        613,
+        486,
+        160,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "duration" : 1259,
+      "end" : "2026-10-11T04:31:38Z",
+      "loudDuration" : 0,
+      "maxDB" : 64.9,
+      "sampleCount" : 12,
+      "source" : "AirPods Pro",
+      "spans" : [
+        {
+          "end" : "2026-10-11T04:04:05Z",
+          "start" : "2026-10-11T04:02:44Z"
+        },
+        {
+          "end" : "2026-10-11T04:10:59Z",
+          "start" : "2026-10-11T04:07:05Z"
+        },
+        {
+          "end" : "2026-10-11T04:31:38Z",
+          "start" : "2026-10-11T04:15:54Z"
+        }
+      ],
+      "start" : "2026-10-11T04:02:44Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 64.8618069815195,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        113,
+        0,
+        374,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "duration" : 487,
+      "end" : "2026-10-11T06:09:35Z",
+      "loudDuration" : 0,
+      "maxDB" : 67.2,
+      "sampleCount" : 4,
+      "source" : "WH-1000XM5",
+      "spans" : [
+        {
+          "end" : "2026-10-11T06:09:35Z",
+          "start" : "2026-10-11T06:01:28Z"
+        }
+      ],
+      "start" : "2026-10-11T06:01:28Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 65.15221476510067,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        292,
+        461,
+        449,
+        171,
+        0,
+        117,
+        0,
+        0,
+        0
+      ],
+      "duration" : 1490,
+      "end" : "2026-10-11T06:47:28Z",
+      "loudDuration" : 117,
+      "maxDB" : 82.7,
+      "sampleCount" : 14,
+      "source" : "WH-1000XM5",
+      "spans" : [
+        {
+          "end" : "2026-10-11T06:47:28Z",
+          "start" : "2026-10-11T06:22:38Z"
+        }
+      ],
+      "start" : "2026-10-11T06:22:38Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 68.26069612827531,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        0,
+        956,
+        620,
+        829,
+        152,
+        0,
+        0,
+        0,
+        0
+      ],
+      "duration" : 2557,
+      "end" : "2026-10-12T00:54:42Z",
+      "loudDuration" : 0,
+      "maxDB" : 75.7,
+      "sampleCount" : 21,
+      "source" : "WH-1000XM5",
+      "spans" : [
+        {
+          "end" : "2026-10-12T00:54:42Z",
+          "start" : "2026-10-12T00:12:05Z"
+        }
+      ],
+      "start" : "2026-10-12T00:12:05Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 77.6436434108527,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        0,
+        0,
+        472,
+        646,
+        621,
+        520,
+        0,
+        213,
+        108
+      ],
+      "duration" : 2580,
+      "end" : "2026-10-12T04:49:44Z",
+      "loudDuration" : 841,
+      "maxDB" : 96.3,
+      "sampleCount" : 22,
+      "source" : "AirPods Max",
+      "spans" : [
+        {
+          "end" : "2026-10-12T04:49:44Z",
+          "start" : "2026-10-12T04:06:44Z"
+        }
+      ],
+      "start" : "2026-10-12T04:06:44Z",
+      "veryLoudDuration" : 321
+    },
+    {
+      "avgDB" : 77.43093596059113,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        0,
+        0,
+        306,
+        119,
+        353,
+        0,
+        155,
+        0,
+        82
+      ],
+      "duration" : 1015,
+      "end" : "2026-10-12T09:33:34Z",
+      "loudDuration" : 237,
+      "maxDB" : 97.5,
+      "sampleCount" : 8,
+      "source" : "AirPods Pro 2",
+      "spans" : [
+        {
+          "end" : "2026-10-12T09:33:34Z",
+          "start" : "2026-10-12T09:16:39Z"
+        }
+      ],
+      "start" : "2026-10-12T09:16:39Z",
+      "veryLoudDuration" : 82
+    },
+    {
+      "avgDB" : 80.87706093189963,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        0,
+        0,
+        80,
+        0,
+        195,
+        190,
+        0,
+        0,
+        93
+      ],
+      "duration" : 558,
+      "end" : "2026-10-12T09:49:14Z",
+      "loudDuration" : 283,
+      "maxDB" : 97.1,
+      "sampleCount" : 6,
+      "source" : "AirPods Pro 2",
+      "spans" : [
+        {
+          "end" : "2026-10-12T09:49:14Z",
+          "start" : "2026-10-12T09:39:56Z"
+        }
+      ],
+      "start" : "2026-10-12T09:39:56Z",
+      "veryLoudDuration" : 93
+    },
+    {
+      "avgDB" : 67.65040871934605,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        0,
+        300,
+        433,
+        368,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "duration" : 1101,
+      "end" : "2026-10-16T02:37:26Z",
+      "loudDuration" : 0,
+      "maxDB" : 72.8,
+      "sampleCount" : 9,
+      "source" : "AirPods Pro 2",
+      "spans" : [
+        {
+          "end" : "2026-10-16T02:37:26Z",
+          "start" : "2026-10-16T02:19:05Z"
+        }
+      ],
+      "start" : "2026-10-16T02:19:05Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 65.25326388888888,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        296,
+        421,
+        441,
+        282,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "duration" : 1440,
+      "end" : "2026-10-16T03:12:05Z",
+      "loudDuration" : 0,
+      "maxDB" : 72.4,
+      "sampleCount" : 15,
+      "source" : "AirPods Pro 2",
+      "spans" : [
+        {
+          "end" : "2026-10-16T03:12:05Z",
+          "start" : "2026-10-16T02:48:05Z"
+        }
+      ],
+      "start" : "2026-10-16T02:48:05Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 68.9,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        0,
+        0,
+        79,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "duration" : 79,
+      "end" : "2026-10-17T01:10:21Z",
+      "loudDuration" : 0,
+      "maxDB" : 68.9,
+      "sampleCount" : 1,
+      "source" : "WH-1000XM5",
+      "spans" : [
+        {
+          "end" : "2026-10-17T01:10:21Z",
+          "start" : "2026-10-17T01:09:02Z"
+        }
+      ],
+      "start" : "2026-10-17T01:09:02Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 77.45685409775817,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1199,
+        729,
+        586,
+        0,
+        60,
+        147
+      ],
+      "duration" : 2721,
+      "end" : "2026-10-17T02:04:02Z",
+      "loudDuration" : 793,
+      "maxDB" : 100,
+      "sampleCount" : 22,
+      "source" : "WH-1000XM5",
+      "spans" : [
+        {
+          "end" : "2026-10-17T02:04:02Z",
+          "start" : "2026-10-17T01:18:41Z"
+        }
+      ],
+      "start" : "2026-10-17T01:18:41Z",
+      "veryLoudDuration" : 207
+    },
+    {
+      "avgDB" : 61.54411603721949,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        891,
+        503,
+        433,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "duration" : 1827,
+      "end" : "2026-10-17T05:39:58Z",
+      "loudDuration" : 0,
+      "maxDB" : 69.4,
+      "sampleCount" : 15,
+      "source" : "AirPods Pro",
+      "spans" : [
+        {
+          "end" : "2026-10-17T05:39:58Z",
+          "start" : "2026-10-17T05:09:31Z"
+        }
+      ],
+      "start" : "2026-10-17T05:09:31Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 62.658627648839555,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        238,
+        454,
+        299,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "duration" : 991,
+      "end" : "2026-10-17T07:25:38Z",
+      "loudDuration" : 0,
+      "maxDB" : 68.6,
+      "sampleCount" : 8,
+      "source" : "AirPods Pro 2",
+      "spans" : [
+        {
+          "end" : "2026-10-17T07:25:38Z",
+          "start" : "2026-10-17T07:09:07Z"
+        }
+      ],
+      "start" : "2026-10-17T07:09:07Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 62.60413313825895,
+      "dbBuckets" : [
+        0,
+        0,
+        327,
+        543,
+        1082,
+        704,
+        0,
+        78,
+        0,
+        0,
+        0,
+        0
+      ],
+      "duration" : 2734,
+      "end" : "2026-10-17T08:22:07Z",
+      "loudDuration" : 0,
+      "maxDB" : 79.8,
+      "sampleCount" : 23,
+      "source" : "AirPods Pro 2",
+      "spans" : [
+        {
+          "end" : "2026-10-17T08:22:07Z",
+          "start" : "2026-10-17T07:36:33Z"
+        }
+      ],
+      "start" : "2026-10-17T07:36:33Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 68.48809523809524,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        0,
+        0,
+        229,
+        65,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "duration" : 294,
+      "end" : "2026-10-18T01:21:51Z",
+      "loudDuration" : 0,
+      "maxDB" : 71.7,
+      "sampleCount" : 3,
+      "source" : "WH-1000XM5",
+      "spans" : [
+        {
+          "end" : "2026-10-18T01:21:51Z",
+          "start" : "2026-10-18T01:16:57Z"
+        }
+      ],
+      "start" : "2026-10-18T01:16:57Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 72.5243041412084,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        0,
+        103,
+        289,
+        527,
+        304,
+        250,
+        0,
+        0,
+        0
+      ],
+      "duration" : 1473,
+      "end" : "2026-10-18T01:55:57Z",
+      "loudDuration" : 250,
+      "maxDB" : 80.4,
+      "sampleCount" : 13,
+      "source" : "WH-1000XM5",
+      "spans" : [
+        {
+          "end" : "2026-10-18T01:55:57Z",
+          "start" : "2026-10-18T01:31:24Z"
+        }
+      ],
+      "start" : "2026-10-18T01:31:24Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 65.08125,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        283,
+        521,
+        680,
+        0,
+        196,
+        0,
+        0,
+        0,
+        0
+      ],
+      "duration" : 1680,
+      "end" : "2026-10-19T02:42:00Z",
+      "loudDuration" : 0,
+      "maxDB" : 77.8,
+      "sampleCount" : 17,
+      "source" : "AirPods Pro",
+      "spans" : [
+        {
+          "end" : "2026-10-19T02:42:00Z",
+          "start" : "2026-10-19T02:14:00Z"
+        }
+      ],
+      "start" : "2026-10-19T02:14:00Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 60.868687943262415,
+      "dbBuckets" : [
+        0,
+        0,
+        326,
+        1037,
+        881,
+        334,
+        113,
+        129,
+        0,
+        0,
+        0,
+        0
+      ],
+      "duration" : 2820,
+      "end" : "2026-10-19T05:47:02Z",
+      "loudDuration" : 0,
+      "maxDB" : 78.6,
+      "sampleCount" : 23,
+      "source" : "AirPods Pro",
+      "spans" : [
+        {
+          "end" : "2026-10-19T05:47:02Z",
+          "start" : "2026-10-19T05:00:02Z"
+        }
+      ],
+      "start" : "2026-10-19T05:00:02Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 70.77857142857142,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        0,
+        186,
+        321,
+        313,
+        440,
+        0,
+        0,
+        0,
+        0
+      ],
+      "duration" : 1260,
+      "end" : "2026-10-20T00:32:53Z",
+      "loudDuration" : 0,
+      "maxDB" : 76.7,
+      "sampleCount" : 11,
+      "source" : "AirPods Pro",
+      "spans" : [
+        {
+          "end" : "2026-10-20T00:32:53Z",
+          "start" : "2026-10-20T00:11:53Z"
+        }
+      ],
+      "start" : "2026-10-20T00:11:53Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 63.11708333333333,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        0,
+        240,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "duration" : 240,
+      "end" : "2026-10-20T04:10:15Z",
+      "loudDuration" : 0,
+      "maxDB" : 64,
+      "sampleCount" : 2,
+      "source" : "WH-1000XM5",
+      "spans" : [
+        {
+          "end" : "2026-10-20T04:10:15Z",
+          "start" : "2026-10-20T04:06:15Z"
+        }
+      ],
+      "start" : "2026-10-20T04:06:15Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 73.56755895474824,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        0,
+        71,
+        573,
+        296,
+        362,
+        177,
+        0,
+        90,
+        0
+      ],
+      "duration" : 1569,
+      "end" : "2026-10-20T04:49:15Z",
+      "loudDuration" : 267,
+      "maxDB" : 93.6,
+      "sampleCount" : 14,
+      "source" : "WH-1000XM5",
+      "spans" : [
+        {
+          "end" : "2026-10-20T04:49:15Z",
+          "start" : "2026-10-20T04:23:06Z"
+        }
+      ],
+      "start" : "2026-10-20T04:23:06Z",
+      "veryLoudDuration" : 90
+    },
+    {
+      "avgDB" : 74.73949074074075,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        0,
+        127,
+        400,
+        516,
+        895,
+        0,
+        105,
+        117,
+        0
+      ],
+      "duration" : 2160,
+      "end" : "2026-10-21T01:53:16Z",
+      "loudDuration" : 222,
+      "maxDB" : 93.7,
+      "sampleCount" : 20,
+      "source" : "AirPods Pro 2",
+      "spans" : [
+        {
+          "end" : "2026-10-21T01:53:16Z",
+          "start" : "2026-10-21T01:17:16Z"
+        }
+      ],
+      "start" : "2026-10-21T01:17:16Z",
+      "veryLoudDuration" : 117
+    },
+    {
+      "avgDB" : 81.82957746478874,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        109,
+        175,
+        0,
+        0,
+        0
+      ],
+      "duration" : 284,
+      "end" : "2026-10-22T01:15:36Z",
+      "loudDuration" : 175,
+      "maxDB" : 84.9,
+      "sampleCount" : 2,
+      "source" : "WH-1000XM5",
+      "spans" : [
+        {
+          "end" : "2026-10-22T01:15:36Z",
+          "start" : "2026-10-22T01:10:52Z"
+        }
+      ],
+      "start" : "2026-10-22T01:10:52Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 78.16560885608857,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        0,
+        0,
+        178,
+        246,
+        181,
+        750,
+        0,
+        0,
+        0
+      ],
+      "duration" : 1355,
+      "end" : "2026-10-22T01:51:59Z",
+      "loudDuration" : 750,
+      "maxDB" : 82.8,
+      "sampleCount" : 12,
+      "source" : "WH-1000XM5",
+      "spans" : [
+        {
+          "end" : "2026-10-22T01:51:59Z",
+          "start" : "2026-10-22T01:29:24Z"
+        }
+      ],
+      "start" : "2026-10-22T01:29:24Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 71.22456989247314,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        0,
+        388,
+        513,
+        222,
+        737,
+        0,
+        0,
+        0,
+        0
+      ],
+      "duration" : 1860,
+      "end" : "2026-10-22T05:43:48Z",
+      "loudDuration" : 0,
+      "maxDB" : 79.4,
+      "sampleCount" : 14,
+      "source" : "AirPods Max",
+      "spans" : [
+        {
+          "end" : "2026-10-22T05:43:48Z",
+          "start" : "2026-10-22T05:12:48Z"
+        }
+      ],
+      "start" : "2026-10-22T05:12:48Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 66.99869451697127,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        256,
+        533,
+        0,
+        229,
+        0,
+        0,
+        0,
+        131,
+        0
+      ],
+      "duration" : 1149,
+      "end" : "2026-10-22T08:25:02Z",
+      "loudDuration" : 131,
+      "maxDB" : 90.4,
+      "sampleCount" : 10,
+      "source" : "AirPods Pro 2",
+      "spans" : [
+        {
+          "end" : "2026-10-22T08:25:02Z",
+          "start" : "2026-10-22T08:05:53Z"
+        }
+      ],
+      "start" : "2026-10-22T08:05:53Z",
+      "veryLoudDuration" : 131
+    },
+    {
+      "avgDB" : 66.28932496075353,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        182,
+        350,
+        318,
+        424,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "duration" : 1274,
+      "end" : "2026-10-22T08:56:53Z",
+      "loudDuration" : 0,
+      "maxDB" : 73.3,
+      "sampleCount" : 13,
+      "source" : "AirPods Pro 2",
+      "spans" : [
+        {
+          "end" : "2026-10-22T08:56:53Z",
+          "start" : "2026-10-22T08:35:39Z"
+        }
+      ],
+      "start" : "2026-10-22T08:35:39Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 73.61490872210953,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        0,
+        0,
+        205,
+        374,
+        407,
+        0,
+        0,
+        0,
+        0
+      ],
+      "duration" : 986,
+      "end" : "2026-10-23T00:30:47Z",
+      "loudDuration" : 0,
+      "maxDB" : 78.4,
+      "sampleCount" : 8,
+      "source" : "AirPods Pro 2",
+      "spans" : [
+        {
+          "end" : "2026-10-23T00:30:47Z",
+          "start" : "2026-10-23T00:14:21Z"
+        }
+      ],
+      "start" : "2026-10-23T00:14:21Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 71.62365887207703,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        0,
+        0,
+        230,
+        338,
+        159,
+        0,
+        0,
+        0,
+        0
+      ],
+      "duration" : 727,
+      "end" : "2026-10-23T00:53:21Z",
+      "loudDuration" : 0,
+      "maxDB" : 75.6,
+      "sampleCount" : 7,
+      "source" : "AirPods Pro 2",
+      "spans" : [
+        {
+          "end" : "2026-10-23T00:53:21Z",
+          "start" : "2026-10-23T00:41:14Z"
+        }
+      ],
+      "start" : "2026-10-23T00:41:14Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 70.38907563025211,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        0,
+        276,
+        354,
+        435,
+        482,
+        0,
+        0,
+        0,
+        0
+      ],
+      "duration" : 1547,
+      "end" : "2026-10-24T01:30:55Z",
+      "loudDuration" : 0,
+      "maxDB" : 76.8,
+      "sampleCount" : 13,
+      "source" : "AirPods Pro 2",
+      "spans" : [
+        {
+          "end" : "2026-10-24T01:30:55Z",
+          "start" : "2026-10-24T01:05:08Z"
+        }
+      ],
+      "start" : "2026-10-24T01:05:08Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 69.72813257881973,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        0,
+        273,
+        511,
+        313,
+        140,
+        0,
+        0,
+        0,
+        0
+      ],
+      "duration" : 1237,
+      "end" : "2026-10-24T02:03:08Z",
+      "loudDuration" : 0,
+      "maxDB" : 77,
+      "sampleCount" : 11,
+      "source" : "AirPods Pro 2",
+      "spans" : [
+        {
+          "end" : "2026-10-24T02:03:08Z",
+          "start" : "2026-10-24T01:42:31Z"
+        }
+      ],
+      "start" : "2026-10-24T01:42:31Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 76.81765363128493,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        344,
+        324,
+        227,
+        0,
+        0,
+        0
+      ],
+      "duration" : 895,
+      "end" : "2026-10-24T05:43:39Z",
+      "loudDuration" : 227,
+      "maxDB" : 84.1,
+      "sampleCount" : 8,
+      "source" : "AirPods Max",
+      "spans" : [
+        {
+          "end" : "2026-10-24T05:43:39Z",
+          "start" : "2026-10-24T05:28:44Z"
+        }
+      ],
+      "start" : "2026-10-24T05:28:44Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 76.90014627011213,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        733,
+        1053,
+        265,
+        0,
+        0,
+        0
+      ],
+      "duration" : 2051,
+      "end" : "2026-10-25T01:39:04Z",
+      "loudDuration" : 265,
+      "maxDB" : 80.9,
+      "sampleCount" : 17,
+      "source" : "AirPods Pro 2",
+      "spans" : [
+        {
+          "end" : "2026-10-25T01:28:33Z",
+          "start" : "2026-10-25T01:00:04Z"
+        },
+        {
+          "end" : "2026-10-25T01:39:04Z",
+          "start" : "2026-10-25T01:33:22Z"
+        }
+      ],
+      "start" : "2026-10-25T01:00:04Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 71.26549382716048,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        0,
+        82,
+        544,
+        496,
+        498,
+        0,
+        0,
+        0,
+        0
+      ],
+      "duration" : 1620,
+      "end" : "2026-10-25T04:42:44Z",
+      "loudDuration" : 0,
+      "maxDB" : 78.8,
+      "sampleCount" : 15,
+      "source" : "AirPods Max",
+      "spans" : [
+        {
+          "end" : "2026-10-25T04:42:44Z",
+          "start" : "2026-10-25T04:15:44Z"
+        }
+      ],
+      "start" : "2026-10-25T04:15:44Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 62.095281124498,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        498,
+        87,
+        411,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "duration" : 996,
+      "end" : "2026-10-26T00:33:13Z",
+      "loudDuration" : 0,
+      "maxDB" : 69.4,
+      "sampleCount" : 8,
+      "source" : "WH-1000XM5",
+      "spans" : [
+        {
+          "end" : "2026-10-26T00:33:13Z",
+          "start" : "2026-10-26T00:16:37Z"
+        }
+      ],
+      "start" : "2026-10-26T00:16:37Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 62.5,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        0,
+        137,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "duration" : 137,
+      "end" : "2026-10-26T00:41:37Z",
+      "loudDuration" : 0,
+      "maxDB" : 62.5,
+      "sampleCount" : 1,
+      "source" : "WH-1000XM5",
+      "spans" : [
+        {
+          "end" : "2026-10-26T00:41:37Z",
+          "start" : "2026-10-26T00:39:20Z"
+        }
+      ],
+      "start" : "2026-10-26T00:39:20Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 64.33549160671463,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        212,
+        625,
+        737,
+        94,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "duration" : 1668,
+      "end" : "2026-10-26T05:48:34Z",
+      "loudDuration" : 0,
+      "maxDB" : 70.8,
+      "sampleCount" : 16,
+      "source" : "AirPods Pro 2",
+      "spans" : [
+        {
+          "end" : "2026-10-26T05:23:22Z",
+          "start" : "2026-10-26T05:18:34Z"
+        },
+        {
+          "end" : "2026-10-26T05:48:34Z",
+          "start" : "2026-10-26T05:25:34Z"
+        }
+      ],
+      "start" : "2026-10-26T05:18:34Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 69.74608843537415,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        0,
+        808,
+        984,
+        635,
+        432,
+        0,
+        0,
+        81,
+        0
+      ],
+      "duration" : 2940,
+      "end" : "2026-10-27T01:50:48Z",
+      "loudDuration" : 81,
+      "maxDB" : 92.6,
+      "sampleCount" : 24,
+      "source" : "WH-1000XM5",
+      "spans" : [
+        {
+          "end" : "2026-10-27T01:50:48Z",
+          "start" : "2026-10-27T01:01:48Z"
+        }
+      ],
+      "start" : "2026-10-27T01:01:48Z",
+      "veryLoudDuration" : 81
+    },
+    {
+      "avgDB" : 69.22699186991869,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        0,
+        0,
+        338,
+        277,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "duration" : 615,
+      "end" : "2026-10-27T04:25:59Z",
+      "loudDuration" : 0,
+      "maxDB" : 74.1,
+      "sampleCount" : 5,
+      "source" : "AirPods Max",
+      "spans" : [
+        {
+          "end" : "2026-10-27T04:25:59Z",
+          "start" : "2026-10-27T04:15:44Z"
+        }
+      ],
+      "start" : "2026-10-27T04:15:44Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 70.65275938189845,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        0,
+        219,
+        307,
+        509,
+        229,
+        95,
+        0,
+        0,
+        0
+      ],
+      "duration" : 1359,
+      "end" : "2026-10-27T04:56:18Z",
+      "loudDuration" : 95,
+      "maxDB" : 80.3,
+      "sampleCount" : 12,
+      "source" : "AirPods Max",
+      "spans" : [
+        {
+          "end" : "2026-10-27T04:56:18Z",
+          "start" : "2026-10-27T04:33:39Z"
+        }
+      ],
+      "start" : "2026-10-27T04:33:39Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 67.81103316326531,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        0,
+        345,
+        503,
+        720,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "duration" : 1568,
+      "end" : "2026-10-28T02:46:08Z",
+      "loudDuration" : 0,
+      "maxDB" : 73,
+      "sampleCount" : 13,
+      "source" : "AirPods Pro 2",
+      "spans" : [
+        {
+          "end" : "2026-10-28T02:31:53Z",
+          "start" : "2026-10-28T02:15:34Z"
+        },
+        {
+          "end" : "2026-10-28T02:46:08Z",
+          "start" : "2026-10-28T02:36:19Z"
+        }
+      ],
+      "start" : "2026-10-28T02:15:34Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 67.22263969171483,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        0,
+        436,
+        259,
+        343,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "duration" : 1038,
+      "end" : "2026-10-28T03:11:21Z",
+      "loudDuration" : 0,
+      "maxDB" : 73,
+      "sampleCount" : 8,
+      "source" : "AirPods Pro 2",
+      "spans" : [
+        {
+          "end" : "2026-10-28T03:00:22Z",
+          "start" : "2026-10-28T02:51:59Z"
+        },
+        {
+          "end" : "2026-10-28T03:11:21Z",
+          "start" : "2026-10-28T03:02:26Z"
+        }
+      ],
+      "start" : "2026-10-28T02:51:59Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 75.87619047619049,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        0,
+        0,
+        174,
+        0,
+        145,
+        143,
+        0,
+        0,
+        0
+      ],
+      "duration" : 462,
+      "end" : "2026-10-28T04:18:02Z",
+      "loudDuration" : 143,
+      "maxDB" : 84.3,
+      "sampleCount" : 3,
+      "source" : "WH-1000XM5",
+      "spans" : [
+        {
+          "end" : "2026-10-28T04:18:02Z",
+          "start" : "2026-10-28T04:10:20Z"
+        }
+      ],
+      "start" : "2026-10-28T04:10:20Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 76.93056653491435,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        0,
+        0,
+        272,
+        449,
+        252,
+        472,
+        0,
+        73,
+        0
+      ],
+      "duration" : 1518,
+      "end" : "2026-10-28T04:57:20Z",
+      "loudDuration" : 545,
+      "maxDB" : 94.8,
+      "sampleCount" : 12,
+      "source" : "WH-1000XM5",
+      "spans" : [
+        {
+          "end" : "2026-10-28T04:57:20Z",
+          "start" : "2026-10-28T04:32:02Z"
+        }
+      ],
+      "start" : "2026-10-28T04:32:02Z",
+      "veryLoudDuration" : 73
+    },
+    {
+      "avgDB" : 62.47352941176471,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        206,
+        0,
+        134,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "duration" : 340,
+      "end" : "2026-10-31T02:22:17Z",
+      "loudDuration" : 0,
+      "maxDB" : 68.2,
+      "sampleCount" : 3,
+      "source" : "WH-1000XM5",
+      "spans" : [
+        {
+          "end" : "2026-10-31T02:22:17Z",
+          "start" : "2026-10-31T02:16:37Z"
+        }
+      ],
+      "start" : "2026-10-31T02:16:37Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 65.13585086042066,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        144,
+        570,
+        117,
+        87,
+        0,
+        128,
+        0,
+        0,
+        0
+      ],
+      "duration" : 1046,
+      "end" : "2026-10-31T02:49:39Z",
+      "loudDuration" : 128,
+      "maxDB" : 82.8,
+      "sampleCount" : 9,
+      "source" : "WH-1000XM5",
+      "spans" : [
+        {
+          "end" : "2026-10-31T02:49:39Z",
+          "start" : "2026-10-31T02:32:13Z"
+        }
+      ],
+      "start" : "2026-10-31T02:32:13Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 77.31576086956521,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        184,
+        0,
+        0,
+        0,
+        0
+      ],
+      "duration" : 184,
+      "end" : "2026-11-01T01:04:22Z",
+      "loudDuration" : 0,
+      "maxDB" : 78.1,
+      "sampleCount" : 2,
+      "source" : "AirPods Max",
+      "spans" : [
+        {
+          "end" : "2026-11-01T01:04:22Z",
+          "start" : "2026-11-01T01:01:18Z"
+        }
+      ],
+      "start" : "2026-11-01T01:01:18Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 75.74919499105546,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        0,
+        0,
+        313,
+        212,
+        199,
+        288,
+        106,
+        0,
+        0
+      ],
+      "duration" : 1118,
+      "end" : "2026-11-01T01:34:20Z",
+      "loudDuration" : 394,
+      "maxDB" : 89.4,
+      "sampleCount" : 9,
+      "source" : "AirPods Max",
+      "spans" : [
+        {
+          "end" : "2026-11-01T01:34:20Z",
+          "start" : "2026-11-01T01:15:42Z"
+        }
+      ],
+      "start" : "2026-11-01T01:15:42Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 77.67669172932332,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        0,
+        0,
+        227,
+        150,
+        728,
+        358,
+        0,
+        0,
+        0
+      ],
+      "duration" : 1463,
+      "end" : "2026-11-01T04:31:00Z",
+      "loudDuration" : 358,
+      "maxDB" : 84.1,
+      "sampleCount" : 12,
+      "source" : "AirPods Pro",
+      "spans" : [
+        {
+          "end" : "2026-11-01T04:31:00Z",
+          "start" : "2026-11-01T04:06:37Z"
+        }
+      ],
+      "start" : "2026-11-01T04:06:37Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 75.3,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        3,
+        0,
+        0,
+        0,
+        0
+      ],
+      "duration" : 3,
+      "end" : "2026-11-01T04:40:37Z",
+      "loudDuration" : 0,
+      "maxDB" : 75.3,
+      "sampleCount" : 1,
+      "source" : "AirPods Pro",
+      "spans" : [
+        {
+          "end" : "2026-11-01T04:40:37Z",
+          "start" : "2026-11-01T04:40:34Z"
+        }
+      ],
+      "start" : "2026-11-01T04:40:34Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 60.548425925925926,
+      "dbBuckets" : [
+        0,
+        0,
+        619,
+        1213,
+        914,
+        200,
+        69,
+        98,
+        127,
+        0,
+        0,
+        0
+      ],
+      "duration" : 3240,
+      "end" : "2026-11-02T03:03:03Z",
+      "loudDuration" : 127,
+      "maxDB" : 83.6,
+      "sampleCount" : 31,
+      "source" : "AirPods Pro 2",
+      "spans" : [
+        {
+          "end" : "2026-11-02T03:03:03Z",
+          "start" : "2026-11-02T02:09:03Z"
+        }
+      ],
+      "start" : "2026-11-02T02:09:03Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 68.16034188034189,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        0,
+        532,
+        799,
+        1009,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "duration" : 2340,
+      "end" : "2026-11-03T01:44:56Z",
+      "loudDuration" : 0,
+      "maxDB" : 73.8,
+      "sampleCount" : 20,
+      "source" : "AirPods Pro 2",
+      "spans" : [
+        {
+          "end" : "2026-11-03T01:44:56Z",
+          "start" : "2026-11-03T01:05:56Z"
+        }
+      ],
+      "start" : "2026-11-03T01:05:56Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 77.40024096385542,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        0,
+        0,
+        84,
+        245,
+        384,
+        532,
+        0,
+        0,
+        0
+      ],
+      "duration" : 1245,
+      "end" : "2026-11-03T04:22:49Z",
+      "loudDuration" : 532,
+      "maxDB" : 82.5,
+      "sampleCount" : 11,
+      "source" : "WH-1000XM5",
+      "spans" : [
+        {
+          "end" : "2026-11-03T04:22:49Z",
+          "start" : "2026-11-03T04:02:04Z"
+        }
+      ],
+      "start" : "2026-11-03T04:02:04Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 78.1032258064516,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        266,
+        93,
+        323,
+        0,
+        0,
+        0
+      ],
+      "duration" : 682,
+      "end" : "2026-11-03T04:44:46Z",
+      "loudDuration" : 323,
+      "maxDB" : 82.5,
+      "sampleCount" : 6,
+      "source" : "WH-1000XM5",
+      "spans" : [
+        {
+          "end" : "2026-11-03T04:44:46Z",
+          "start" : "2026-11-03T04:33:24Z"
+        }
+      ],
+      "start" : "2026-11-03T04:33:24Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 64.5233320173707,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        493,
+        965,
+        721,
+        354,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "duration" : 2533,
+      "end" : "2026-11-03T09:42:17Z",
+      "loudDuration" : 0,
+      "maxDB" : 72.2,
+      "sampleCount" : 21,
+      "source" : "AirPods Max",
+      "spans" : [
+        {
+          "end" : "2026-11-03T09:42:17Z",
+          "start" : "2026-11-03T09:00:04Z"
+        }
+      ],
+      "start" : "2026-11-03T09:00:04Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 63.048253968253974,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        95,
+        109,
+        111,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "duration" : 315,
+      "end" : "2026-11-03T09:59:05Z",
+      "loudDuration" : 0,
+      "maxDB" : 65.1,
+      "sampleCount" : 3,
+      "source" : "AirPods Max",
+      "spans" : [
+        {
+          "end" : "2026-11-03T09:59:05Z",
+          "start" : "2026-11-03T09:53:50Z"
+        }
+      ],
+      "start" : "2026-11-03T09:53:50Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 61.6,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        0,
+        170,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "duration" : 170,
+      "end" : "2026-11-03T10:11:16Z",
+      "loudDuration" : 0,
+      "maxDB" : 61.6,
+      "sampleCount" : 1,
+      "source" : "AirPods Max",
+      "spans" : [
+        {
+          "end" : "2026-11-03T10:11:16Z",
+          "start" : "2026-11-03T10:08:26Z"
+        }
+      ],
+      "start" : "2026-11-03T10:08:26Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 61.92637168141592,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        260,
+        180,
+        125,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "duration" : 565,
+      "end" : "2026-11-03T10:26:04Z",
+      "loudDuration" : 0,
+      "maxDB" : 68.3,
+      "sampleCount" : 5,
+      "source" : "AirPods Max",
+      "spans" : [
+        {
+          "end" : "2026-11-03T10:26:04Z",
+          "start" : "2026-11-03T10:16:39Z"
+        }
+      ],
+      "start" : "2026-11-03T10:16:39Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 62.846884057971025,
+      "dbBuckets" : [
+        0,
+        0,
+        85,
+        636,
+        1009,
+        1030,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "duration" : 2760,
+      "end" : "2026-11-04T03:04:22Z",
+      "loudDuration" : 0,
+      "maxDB" : 69.3,
+      "sampleCount" : 26,
+      "source" : "WH-1000XM5",
+      "spans" : [
+        {
+          "end" : "2026-11-04T03:04:22Z",
+          "start" : "2026-11-04T02:18:22Z"
+        }
+      ],
+      "start" : "2026-11-04T02:18:22Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 78.76476462196862,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        0,
+        0,
+        108,
+        221,
+        240,
+        833,
+        0,
+        0,
+        0
+      ],
+      "duration" : 1402,
+      "end" : "2026-11-04T05:28:59Z",
+      "loudDuration" : 833,
+      "maxDB" : 84,
+      "sampleCount" : 11,
+      "source" : "AirPods Max",
+      "spans" : [
+        {
+          "end" : "2026-11-04T05:28:59Z",
+          "start" : "2026-11-04T05:05:37Z"
+        }
+      ],
+      "start" : "2026-11-04T05:05:37Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 76.38097902097903,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        0,
+        0,
+        138,
+        171,
+        270,
+        136,
+        0,
+        0,
+        0
+      ],
+      "duration" : 715,
+      "end" : "2026-11-04T05:46:37Z",
+      "loudDuration" : 136,
+      "maxDB" : 83.8,
+      "sampleCount" : 6,
+      "source" : "AirPods Max",
+      "spans" : [
+        {
+          "end" : "2026-11-04T05:46:37Z",
+          "start" : "2026-11-04T05:34:42Z"
+        }
+      ],
+      "start" : "2026-11-04T05:34:42Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 67.09295934590052,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        662,
+        943,
+        1175,
+        1380,
+        134,
+        0,
+        109,
+        0,
+        0
+      ],
+      "duration" : 4403,
+      "end" : "2026-11-04T10:31:06Z",
+      "loudDuration" : 109,
+      "maxDB" : 85.1,
+      "sampleCount" : 39,
+      "source" : "AirPods Max",
+      "spans" : [
+        {
+          "end" : "2026-11-04T10:31:06Z",
+          "start" : "2026-11-04T09:17:43Z"
+        }
+      ],
+      "start" : "2026-11-04T09:17:43Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 69.35144157814872,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        0,
+        166,
+        186,
+        307,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "duration" : 659,
+      "end" : "2026-11-04T10:48:43Z",
+      "loudDuration" : 0,
+      "maxDB" : 73.1,
+      "sampleCount" : 5,
+      "source" : "AirPods Max",
+      "spans" : [
+        {
+          "end" : "2026-11-04T10:48:43Z",
+          "start" : "2026-11-04T10:37:44Z"
+        }
+      ],
+      "start" : "2026-11-04T10:37:44Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 64.8226148409894,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        120,
+        319,
+        472,
+        221,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "duration" : 1132,
+      "end" : "2026-11-05T00:29:56Z",
+      "loudDuration" : 0,
+      "maxDB" : 71.4,
+      "sampleCount" : 9,
+      "source" : "WH-1000XM5",
+      "spans" : [
+        {
+          "end" : "2026-11-05T00:29:56Z",
+          "start" : "2026-11-05T00:11:04Z"
+        }
+      ],
+      "start" : "2026-11-05T00:11:04Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 65.60284360189573,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        0,
+        488,
+        113,
+        243,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "duration" : 844,
+      "end" : "2026-11-05T00:54:04Z",
+      "loudDuration" : 0,
+      "maxDB" : 72.1,
+      "sampleCount" : 7,
+      "source" : "WH-1000XM5",
+      "spans" : [
+        {
+          "end" : "2026-11-05T00:54:04Z",
+          "start" : "2026-11-05T00:40:00Z"
+        }
+      ],
+      "start" : "2026-11-05T00:40:00Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 65.47873737373737,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        426,
+        421,
+        897,
+        148,
+        88,
+        0,
+        0,
+        0,
+        0
+      ],
+      "duration" : 1980,
+      "end" : "2026-11-05T04:43:52Z",
+      "loudDuration" : 0,
+      "maxDB" : 76.1,
+      "sampleCount" : 17,
+      "source" : "AirPods Pro 2",
+      "spans" : [
+        {
+          "end" : "2026-11-05T04:43:52Z",
+          "start" : "2026-11-05T04:10:52Z"
+        }
+      ],
+      "start" : "2026-11-05T04:10:52Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 70.26862745098039,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        0,
+        329,
+        301,
+        146,
+        104,
+        113,
+        78,
+        0,
+        0
+      ],
+      "duration" : 1071,
+      "end" : "2026-11-06T01:24:17Z",
+      "loudDuration" : 191,
+      "maxDB" : 86.3,
+      "sampleCount" : 10,
+      "source" : "WH-1000XM5",
+      "spans" : [
+        {
+          "end" : "2026-11-06T01:24:17Z",
+          "start" : "2026-11-06T01:06:26Z"
+        }
+      ],
+      "start" : "2026-11-06T01:06:26Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 71.59587155963303,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        0,
+        0,
+        83,
+        135,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "duration" : 218,
+      "end" : "2026-11-06T01:34:26Z",
+      "loudDuration" : 0,
+      "maxDB" : 72.7,
+      "sampleCount" : 2,
+      "source" : "WH-1000XM5",
+      "spans" : [
+        {
+          "end" : "2026-11-06T01:34:26Z",
+          "start" : "2026-11-06T01:30:48Z"
+        }
+      ],
+      "start" : "2026-11-06T01:30:48Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 57.92227112676056,
+      "dbBuckets" : [
+        0,
+        0,
+        164,
+        749,
+        143,
+        80,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "duration" : 1136,
+      "end" : "2026-11-07T02:30:42Z",
+      "loudDuration" : 0,
+      "maxDB" : 66.2,
+      "sampleCount" : 9,
+      "source" : "AirPods Pro",
+      "spans" : [
+        {
+          "end" : "2026-11-07T02:30:42Z",
+          "start" : "2026-11-07T02:11:46Z"
+        }
+      ],
+      "start" : "2026-11-07T02:11:46Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 69.7465602641717,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        137,
+        318,
+        904,
+        140,
+        0,
+        63,
+        255,
+        0,
+        0
+      ],
+      "duration" : 1817,
+      "end" : "2026-11-07T05:31:23Z",
+      "loudDuration" : 318,
+      "maxDB" : 89.6,
+      "sampleCount" : 18,
+      "source" : "AirPods Pro",
+      "spans" : [
+        {
+          "end" : "2026-11-07T05:31:23Z",
+          "start" : "2026-11-07T05:01:06Z"
+        }
+      ],
+      "start" : "2026-11-07T05:01:06Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 66.93467561521253,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        0,
+        122,
+        325,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "duration" : 447,
+      "end" : "2026-11-07T05:50:06Z",
+      "loudDuration" : 0,
+      "maxDB" : 69.8,
+      "sampleCount" : 4,
+      "source" : "AirPods Pro",
+      "spans" : [
+        {
+          "end" : "2026-11-07T05:50:06Z",
+          "start" : "2026-11-07T05:42:39Z"
+        }
+      ],
+      "start" : "2026-11-07T05:42:39Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 66.02469660194176,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        485,
+        570,
+        235,
+        70,
+        133,
+        0,
+        155,
+        0,
+        0
+      ],
+      "duration" : 1648,
+      "end" : "2026-11-07T06:33:54Z",
+      "loudDuration" : 155,
+      "maxDB" : 88,
+      "sampleCount" : 14,
+      "source" : "AirPods Max",
+      "spans" : [
+        {
+          "end" : "2026-11-07T06:33:54Z",
+          "start" : "2026-11-07T06:06:26Z"
+        }
+      ],
+      "start" : "2026-11-07T06:06:26Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 64.81984732824428,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        145,
+        166,
+        151,
+        0,
+        62,
+        0,
+        0,
+        0,
+        0
+      ],
+      "duration" : 524,
+      "end" : "2026-11-07T06:55:19Z",
+      "loudDuration" : 0,
+      "maxDB" : 76.8,
+      "sampleCount" : 5,
+      "source" : "AirPods Max",
+      "spans" : [
+        {
+          "end" : "2026-11-07T06:55:19Z",
+          "start" : "2026-11-07T06:46:35Z"
+        }
+      ],
+      "start" : "2026-11-07T06:46:35Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 65.67853368560105,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        400,
+        1016,
+        1004,
+        521,
+        0,
+        87,
+        0,
+        0,
+        0
+      ],
+      "duration" : 3028,
+      "end" : "2026-11-07T07:56:26Z",
+      "loudDuration" : 87,
+      "maxDB" : 82.7,
+      "sampleCount" : 25,
+      "source" : "AirPods Max",
+      "spans" : [
+        {
+          "end" : "2026-11-07T07:56:26Z",
+          "start" : "2026-11-07T07:05:58Z"
+        }
+      ],
+      "start" : "2026-11-07T07:05:58Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 65.80137857900318,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        194,
+        229,
+        283,
+        237,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "duration" : 943,
+      "end" : "2026-11-07T13:23:57Z",
+      "loudDuration" : 0,
+      "maxDB" : 73.2,
+      "sampleCount" : 8,
+      "source" : "WH-1000XM5",
+      "spans" : [
+        {
+          "end" : "2026-11-07T13:23:57Z",
+          "start" : "2026-11-07T13:08:14Z"
+        }
+      ],
+      "start" : "2026-11-07T13:08:14Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 63.356765375854216,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        505,
+        977,
+        575,
+        138,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "duration" : 2195,
+      "end" : "2026-11-07T14:08:14Z",
+      "loudDuration" : 0,
+      "maxDB" : 71.8,
+      "sampleCount" : 22,
+      "source" : "WH-1000XM5",
+      "spans" : [
+        {
+          "end" : "2026-11-07T14:08:14Z",
+          "start" : "2026-11-07T13:31:39Z"
+        }
+      ],
+      "start" : "2026-11-07T13:31:39Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 74.09185897435897,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        0,
+        0,
+        226,
+        629,
+        498,
+        207,
+        0,
+        0,
+        0
+      ],
+      "duration" : 1560,
+      "end" : "2026-11-08T00:40:44Z",
+      "loudDuration" : 207,
+      "maxDB" : 80.4,
+      "sampleCount" : 14,
+      "source" : "AirPods Pro",
+      "spans" : [
+        {
+          "end" : "2026-11-08T00:40:44Z",
+          "start" : "2026-11-08T00:14:44Z"
+        }
+      ],
+      "start" : "2026-11-08T00:14:44Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 67.1115763546798,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        0,
+        66,
+        266,
+        74,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "duration" : 406,
+      "end" : "2026-11-09T00:20:11Z",
+      "loudDuration" : 0,
+      "maxDB" : 70.3,
+      "sampleCount" : 4,
+      "source" : "AirPods Pro 2",
+      "spans" : [
+        {
+          "end" : "2026-11-09T00:20:11Z",
+          "start" : "2026-11-09T00:13:25Z"
+        }
+      ],
+      "start" : "2026-11-09T00:13:25Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 70.60940620073569,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        0,
+        357,
+        801,
+        184,
+        561,
+        0,
+        0,
+        0,
+        0
+      ],
+      "duration" : 1903,
+      "end" : "2026-11-09T00:57:25Z",
+      "loudDuration" : 0,
+      "maxDB" : 79.2,
+      "sampleCount" : 18,
+      "source" : "AirPods Pro 2",
+      "spans" : [
+        {
+          "end" : "2026-11-09T00:57:25Z",
+          "start" : "2026-11-09T00:25:42Z"
+        }
+      ],
+      "start" : "2026-11-09T00:25:42Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 79.84710743801652,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        158,
+        63,
+        266,
+        0,
+        118,
+        0
+      ],
+      "duration" : 605,
+      "end" : "2026-11-10T01:13:35Z",
+      "loudDuration" : 384,
+      "maxDB" : 90.5,
+      "sampleCount" : 5,
+      "source" : "WH-1000XM5",
+      "spans" : [
+        {
+          "end" : "2026-11-10T01:13:35Z",
+          "start" : "2026-11-10T01:03:30Z"
+        }
+      ],
+      "start" : "2026-11-10T01:03:30Z",
+      "veryLoudDuration" : 118
+    },
+    {
+      "avgDB" : 76.17538218239325,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        0,
+        0,
+        590,
+        402,
+        460,
+        269,
+        0,
+        0,
+        176
+      ],
+      "duration" : 1897,
+      "end" : "2026-11-10T01:51:30Z",
+      "loudDuration" : 445,
+      "maxDB" : 96.3,
+      "sampleCount" : 16,
+      "source" : "WH-1000XM5",
+      "spans" : [
+        {
+          "end" : "2026-11-10T01:51:30Z",
+          "start" : "2026-11-10T01:19:53Z"
+        }
+      ],
+      "start" : "2026-11-10T01:19:53Z",
+      "veryLoudDuration" : 176
+    },
+    {
+      "avgDB" : 59.42927927927929,
+      "dbBuckets" : [
+        0,
+        0,
+        141,
+        1189,
+        890,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "duration" : 2220,
+      "end" : "2026-11-10T04:47:09Z",
+      "loudDuration" : 0,
+      "maxDB" : 64.4,
+      "sampleCount" : 19,
+      "source" : "AirPods Pro 2",
+      "spans" : [
+        {
+          "end" : "2026-11-10T04:47:09Z",
+          "start" : "2026-11-10T04:10:09Z"
+        }
+      ],
+      "start" : "2026-11-10T04:10:09Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 60.132989690721644,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        100,
+        94,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "duration" : 194,
+      "end" : "2026-11-10T09:03:59Z",
+      "loudDuration" : 0,
+      "maxDB" : 60.7,
+      "sampleCount" : 2,
+      "source" : "AirPods Pro",
+      "spans" : [
+        {
+          "end" : "2026-11-10T09:03:59Z",
+          "start" : "2026-11-10T09:00:45Z"
+        }
+      ],
+      "start" : "2026-11-10T09:00:45Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 64.59322552447553,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        518,
+        744,
+        894,
+        0,
+        132,
+        0,
+        0,
+        0,
+        0
+      ],
+      "duration" : 2288,
+      "end" : "2026-11-10T10:04:45Z",
+      "loudDuration" : 0,
+      "maxDB" : 78.5,
+      "sampleCount" : 21,
+      "source" : "AirPods Pro",
+      "spans" : [
+        {
+          "end" : "2026-11-10T09:24:15Z",
+          "start" : "2026-11-10T09:18:12Z"
+        },
+        {
+          "end" : "2026-11-10T09:54:37Z",
+          "start" : "2026-11-10T09:28:08Z"
+        },
+        {
+          "end" : "2026-11-10T10:04:45Z",
+          "start" : "2026-11-10T09:59:09Z"
+        }
+      ],
+      "start" : "2026-11-10T09:18:12Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 73.9536524822695,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        0,
+        194,
+        530,
+        979,
+        862,
+        0,
+        138,
+        117,
+        0
+      ],
+      "duration" : 2820,
+      "end" : "2026-11-11T03:06:27Z",
+      "loudDuration" : 255,
+      "maxDB" : 92.4,
+      "sampleCount" : 23,
+      "source" : "AirPods Pro 2",
+      "spans" : [
+        {
+          "end" : "2026-11-11T03:06:27Z",
+          "start" : "2026-11-11T02:19:27Z"
+        }
+      ],
+      "start" : "2026-11-11T02:19:27Z",
+      "veryLoudDuration" : 117
+    },
+    {
+      "avgDB" : 60.64645608628659,
+      "dbBuckets" : [
+        0,
+        0,
+        232,
+        407,
+        504,
+        0,
+        155,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "duration" : 1298,
+      "end" : "2026-11-11T05:36:39Z",
+      "loudDuration" : 0,
+      "maxDB" : 73.6,
+      "sampleCount" : 10,
+      "source" : "AirPods Max",
+      "spans" : [
+        {
+          "end" : "2026-11-11T05:25:17Z",
+          "start" : "2026-11-11T05:10:14Z"
+        },
+        {
+          "end" : "2026-11-11T05:31:50Z",
+          "start" : "2026-11-11T05:27:52Z"
+        },
+        {
+          "end" : "2026-11-11T05:36:39Z",
+          "start" : "2026-11-11T05:34:02Z"
+        }
+      ],
+      "start" : "2026-11-11T05:10:14Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 74.3,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        123,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "duration" : 123,
+      "end" : "2026-11-11T08:12:57Z",
+      "loudDuration" : 0,
+      "maxDB" : 74.3,
+      "sampleCount" : 1,
+      "source" : "AirPods Max",
+      "spans" : [
+        {
+          "end" : "2026-11-11T08:12:57Z",
+          "start" : "2026-11-11T08:10:54Z"
+        }
+      ],
+      "start" : "2026-11-11T08:10:54Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 72.61687211093992,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        0,
+        491,
+        1215,
+        782,
+        1012,
+        0,
+        223,
+        171,
+        0
+      ],
+      "duration" : 3894,
+      "end" : "2026-11-11T09:29:54Z",
+      "loudDuration" : 394,
+      "maxDB" : 90.8,
+      "sampleCount" : 32,
+      "source" : "AirPods Max",
+      "spans" : [
+        {
+          "end" : "2026-11-11T09:29:54Z",
+          "start" : "2026-11-11T08:25:00Z"
+        }
+      ],
+      "start" : "2026-11-11T08:25:00Z",
+      "veryLoudDuration" : 171
+    },
+    {
+      "avgDB" : 71.77607843137255,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        0,
+        0,
+        613,
+        1026,
+        401,
+        0,
+        0,
+        0,
+        0
+      ],
+      "duration" : 2040,
+      "end" : "2026-11-12T02:46:13Z",
+      "loudDuration" : 0,
+      "maxDB" : 77.2,
+      "sampleCount" : 18,
+      "source" : "AirPods Pro",
+      "spans" : [
+        {
+          "end" : "2026-11-12T02:46:13Z",
+          "start" : "2026-11-12T02:12:13Z"
+        }
+      ],
+      "start" : "2026-11-12T02:12:13Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 63.372833333333325,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        321,
+        384,
+        495,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "duration" : 1200,
+      "end" : "2026-11-12T04:37:55Z",
+      "loudDuration" : 0,
+      "maxDB" : 68.2,
+      "sampleCount" : 11,
+      "source" : "AirPods Pro",
+      "spans" : [
+        {
+          "end" : "2026-11-12T04:37:55Z",
+          "start" : "2026-11-12T04:17:55Z"
+        }
+      ],
+      "start" : "2026-11-12T04:17:55Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 75.90858333333334,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        0,
+        297,
+        212,
+        217,
+        124,
+        0,
+        176,
+        0,
+        174
+      ],
+      "duration" : 1200,
+      "end" : "2026-11-14T02:36:57Z",
+      "loudDuration" : 350,
+      "maxDB" : 95.7,
+      "sampleCount" : 11,
+      "source" : "AirPods Pro 2",
+      "spans" : [
+        {
+          "end" : "2026-11-14T02:36:57Z",
+          "start" : "2026-11-14T02:16:57Z"
+        }
+      ],
+      "start" : "2026-11-14T02:16:57Z",
+      "veryLoudDuration" : 174
+    },
+    {
+      "avgDB" : 68.70785714285714,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        132,
+        278,
+        326,
+        280,
+        244,
+        0,
+        0,
+        0,
+        0
+      ],
+      "duration" : 1260,
+      "end" : "2026-11-14T05:39:42Z",
+      "loudDuration" : 0,
+      "maxDB" : 79.3,
+      "sampleCount" : 12,
+      "source" : "AirPods Pro",
+      "spans" : [
+        {
+          "end" : "2026-11-14T05:39:42Z",
+          "start" : "2026-11-14T05:18:42Z"
+        }
+      ],
+      "start" : "2026-11-14T05:18:42Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 70.33244837758112,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        0,
+        838,
+        291,
+        998,
+        585,
+        0,
+        0,
+        0,
+        0
+      ],
+      "duration" : 2712,
+      "end" : "2026-11-14T11:00:26Z",
+      "loudDuration" : 0,
+      "maxDB" : 77.8,
+      "sampleCount" : 22,
+      "source" : "WH-1000XM5",
+      "spans" : [
+        {
+          "end" : "2026-11-14T10:23:29Z",
+          "start" : "2026-11-14T10:12:03Z"
+        },
+        {
+          "end" : "2026-11-14T11:00:26Z",
+          "start" : "2026-11-14T10:26:40Z"
+        }
+      ],
+      "start" : "2026-11-14T10:12:03Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 73.2357142857143,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        0,
+        110,
+        0,
+        163,
+        0,
+        119,
+        0,
+        0,
+        0
+      ],
+      "duration" : 392,
+      "end" : "2026-11-15T01:35:48Z",
+      "loudDuration" : 119,
+      "maxDB" : 82,
+      "sampleCount" : 3,
+      "source" : "AirPods Max",
+      "spans" : [
+        {
+          "end" : "2026-11-15T01:35:48Z",
+          "start" : "2026-11-15T01:29:16Z"
+        }
+      ],
+      "start" : "2026-11-15T01:29:16Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 70.89635627530365,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        0,
+        94,
+        0,
+        108,
+        45,
+        0,
+        0,
+        0,
+        0
+      ],
+      "duration" : 247,
+      "end" : "2026-11-15T01:46:32Z",
+      "loudDuration" : 0,
+      "maxDB" : 77.8,
+      "sampleCount" : 3,
+      "source" : "AirPods Max",
+      "spans" : [
+        {
+          "end" : "2026-11-15T01:46:32Z",
+          "start" : "2026-11-15T01:42:25Z"
+        }
+      ],
+      "start" : "2026-11-15T01:42:25Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 59.765504978662875,
+      "dbBuckets" : [
+        0,
+        0,
+        341,
+        405,
+        401,
+        117,
+        142,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "duration" : 1406,
+      "end" : "2026-11-16T00:42:09Z",
+      "loudDuration" : 0,
+      "maxDB" : 70.7,
+      "sampleCount" : 11,
+      "source" : "AirPods Pro",
+      "spans" : [
+        {
+          "end" : "2026-11-16T00:42:09Z",
+          "start" : "2026-11-16T00:18:43Z"
+        }
+      ],
+      "start" : "2026-11-16T00:18:43Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 66.28253816793894,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        0,
+        660,
+        134,
+        254,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "duration" : 1048,
+      "end" : "2026-11-16T04:36:22Z",
+      "loudDuration" : 0,
+      "maxDB" : 74.4,
+      "sampleCount" : 9,
+      "source" : "AirPods Pro",
+      "spans" : [
+        {
+          "end" : "2026-11-16T04:36:22Z",
+          "start" : "2026-11-16T04:18:54Z"
+        }
+      ],
+      "start" : "2026-11-16T04:18:54Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 61.62497291440954,
+      "dbBuckets" : [
+        0,
+        0,
+        153,
+        539,
+        541,
+        613,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "duration" : 1846,
+      "end" : "2026-11-17T02:50:15Z",
+      "loudDuration" : 0,
+      "maxDB" : 67.6,
+      "sampleCount" : 16,
+      "source" : "WH-1000XM5",
+      "spans" : [
+        {
+          "end" : "2026-11-17T02:50:15Z",
+          "start" : "2026-11-17T02:19:29Z"
+        }
+      ],
+      "start" : "2026-11-17T02:19:29Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 76.82047930283224,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        0,
+        166,
+        0,
+        115,
+        0,
+        0,
+        0,
+        178,
+        0
+      ],
+      "duration" : 459,
+      "end" : "2026-11-17T05:11:21Z",
+      "loudDuration" : 178,
+      "maxDB" : 92.4,
+      "sampleCount" : 3,
+      "source" : "AirPods Pro",
+      "spans" : [
+        {
+          "end" : "2026-11-17T05:11:21Z",
+          "start" : "2026-11-17T05:03:42Z"
+        }
+      ],
+      "start" : "2026-11-17T05:03:42Z",
+      "veryLoudDuration" : 178
+    },
+    {
+      "avgDB" : 69.27261410788381,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        0,
+        0,
+        175,
+        66,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "duration" : 241,
+      "end" : "2026-11-17T05:24:42Z",
+      "loudDuration" : 0,
+      "maxDB" : 72.6,
+      "sampleCount" : 3,
+      "source" : "AirPods Pro",
+      "spans" : [
+        {
+          "end" : "2026-11-17T05:24:42Z",
+          "start" : "2026-11-17T05:20:41Z"
+        }
+      ],
+      "start" : "2026-11-17T05:20:41Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 76.13174846625768,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        0,
+        0,
+        79,
+        632,
+        160,
+        433,
+        0,
+        0,
+        0
+      ],
+      "duration" : 1304,
+      "end" : "2026-11-18T02:25:24Z",
+      "loudDuration" : 433,
+      "maxDB" : 83.5,
+      "sampleCount" : 10,
+      "source" : "AirPods Pro",
+      "spans" : [
+        {
+          "end" : "2026-11-18T02:17:33Z",
+          "start" : "2026-11-18T02:00:24Z"
+        },
+        {
+          "end" : "2026-11-18T02:25:24Z",
+          "start" : "2026-11-18T02:20:49Z"
+        }
+      ],
+      "start" : "2026-11-18T02:00:24Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 64.44336492890994,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        467,
+        497,
+        331,
+        393,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "duration" : 1688,
+      "end" : "2026-11-18T05:46:14Z",
+      "loudDuration" : 0,
+      "maxDB" : 71.6,
+      "sampleCount" : 15,
+      "source" : "WH-1000XM5",
+      "spans" : [
+        {
+          "end" : "2026-11-18T05:46:14Z",
+          "start" : "2026-11-18T05:18:06Z"
+        }
+      ],
+      "start" : "2026-11-18T05:18:06Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 76.10396969696971,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        0,
+        0,
+        505,
+        896,
+        1160,
+        536,
+        102,
+        101,
+        0
+      ],
+      "duration" : 3300,
+      "end" : "2026-11-18T11:06:17Z",
+      "loudDuration" : 739,
+      "maxDB" : 93.1,
+      "sampleCount" : 28,
+      "source" : "AirPods Max",
+      "spans" : [
+        {
+          "end" : "2026-11-18T11:06:17Z",
+          "start" : "2026-11-18T10:11:17Z"
+        }
+      ],
+      "start" : "2026-11-18T10:11:17Z",
+      "veryLoudDuration" : 101
+    },
+    {
+      "avgDB" : 76.15460797799174,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        0,
+        0,
+        71,
+        260,
+        110,
+        286,
+        0,
+        0,
+        0
+      ],
+      "duration" : 727,
+      "end" : "2026-11-19T01:31:14Z",
+      "loudDuration" : 286,
+      "maxDB" : 82.5,
+      "sampleCount" : 6,
+      "source" : "AirPods Pro",
+      "spans" : [
+        {
+          "end" : "2026-11-19T01:31:14Z",
+          "start" : "2026-11-19T01:19:07Z"
+        }
+      ],
+      "start" : "2026-11-19T01:19:07Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 77.87041467304623,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        969,
+        796,
+        600,
+        70,
+        0,
+        73
+      ],
+      "duration" : 2508,
+      "end" : "2026-11-19T02:19:07Z",
+      "loudDuration" : 743,
+      "maxDB" : 100,
+      "sampleCount" : 22,
+      "source" : "AirPods Pro",
+      "spans" : [
+        {
+          "end" : "2026-11-19T02:19:07Z",
+          "start" : "2026-11-19T01:37:19Z"
+        }
+      ],
+      "start" : "2026-11-19T01:37:19Z",
+      "veryLoudDuration" : 73
+    },
+    {
+      "avgDB" : 74.61202132816288,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        0,
+        0,
+        355,
+        1004,
+        296,
+        329,
+        0,
+        79,
+        0
+      ],
+      "duration" : 2063,
+      "end" : "2026-11-19T04:44:38Z",
+      "loudDuration" : 408,
+      "maxDB" : 91.1,
+      "sampleCount" : 18,
+      "source" : "AirPods Pro 2",
+      "spans" : [
+        {
+          "end" : "2026-11-19T04:08:02Z",
+          "start" : "2026-11-19T04:06:38Z"
+        },
+        {
+          "end" : "2026-11-19T04:44:38Z",
+          "start" : "2026-11-19T04:11:39Z"
+        }
+      ],
+      "start" : "2026-11-19T04:06:38Z",
+      "veryLoudDuration" : 79
+    },
+    {
+      "avgDB" : 66.09534246575342,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        0,
+        106,
+        259,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "duration" : 365,
+      "end" : "2026-11-19T06:23:15Z",
+      "loudDuration" : 0,
+      "maxDB" : 69,
+      "sampleCount" : 4,
+      "source" : "WH-1000XM5",
+      "spans" : [
+        {
+          "end" : "2026-11-19T06:23:15Z",
+          "start" : "2026-11-19T06:17:10Z"
+        }
+      ],
+      "start" : "2026-11-19T06:17:10Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 66.06711772665764,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        0,
+        444,
+        96,
+        199,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "duration" : 739,
+      "end" : "2026-11-19T06:45:23Z",
+      "loudDuration" : 0,
+      "maxDB" : 73.2,
+      "sampleCount" : 6,
+      "source" : "WH-1000XM5",
+      "spans" : [
+        {
+          "end" : "2026-11-19T06:45:23Z",
+          "start" : "2026-11-19T06:33:04Z"
+        }
+      ],
+      "start" : "2026-11-19T06:33:04Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 66.38716883116882,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        0,
+        1128,
+        141,
+        656,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "duration" : 1925,
+      "end" : "2026-11-19T07:32:18Z",
+      "loudDuration" : 0,
+      "maxDB" : 74.5,
+      "sampleCount" : 15,
+      "source" : "WH-1000XM5",
+      "spans" : [
+        {
+          "end" : "2026-11-19T07:32:18Z",
+          "start" : "2026-11-19T07:00:13Z"
+        }
+      ],
+      "start" : "2026-11-19T07:00:13Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 71.18009748172219,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        0,
+        244,
+        392,
+        195,
+        336,
+        0,
+        0,
+        64,
+        0
+      ],
+      "duration" : 1231,
+      "end" : "2026-11-19T07:58:10Z",
+      "loudDuration" : 64,
+      "maxDB" : 93.5,
+      "sampleCount" : 11,
+      "source" : "WH-1000XM5",
+      "spans" : [
+        {
+          "end" : "2026-11-19T07:58:10Z",
+          "start" : "2026-11-19T07:37:39Z"
+        }
+      ],
+      "start" : "2026-11-19T07:37:39Z",
+      "veryLoudDuration" : 64
+    },
+    {
+      "avgDB" : 66.53189655172413,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        0,
+        241,
+        244,
+        0,
+        95,
+        0,
+        0,
+        0,
+        0
+      ],
+      "duration" : 580,
+      "end" : "2026-11-20T01:25:58Z",
+      "loudDuration" : 0,
+      "maxDB" : 77,
+      "sampleCount" : 5,
+      "source" : "WH-1000XM5",
+      "spans" : [
+        {
+          "end" : "2026-11-20T01:25:58Z",
+          "start" : "2026-11-20T01:16:18Z"
+        }
+      ],
+      "start" : "2026-11-20T01:16:18Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 61.18598070739549,
+      "dbBuckets" : [
+        0,
+        0,
+        245,
+        376,
+        392,
+        542,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "duration" : 1555,
+      "end" : "2026-11-20T02:01:18Z",
+      "loudDuration" : 0,
+      "maxDB" : 67.7,
+      "sampleCount" : 13,
+      "source" : "WH-1000XM5",
+      "spans" : [
+        {
+          "end" : "2026-11-20T02:01:18Z",
+          "start" : "2026-11-20T01:35:23Z"
+        }
+      ],
+      "start" : "2026-11-20T01:35:23Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 66.17755208333332,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        464,
+        150,
+        593,
+        713,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "duration" : 1920,
+      "end" : "2026-11-20T04:45:29Z",
+      "loudDuration" : 0,
+      "maxDB" : 71.8,
+      "sampleCount" : 16,
+      "source" : "AirPods Max",
+      "spans" : [
+        {
+          "end" : "2026-11-20T04:45:29Z",
+          "start" : "2026-11-20T04:13:29Z"
+        }
+      ],
+      "start" : "2026-11-20T04:13:29Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 68.89281553398058,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        0,
+        145,
+        689,
+        579,
+        132,
+        0,
+        0,
+        0,
+        0
+      ],
+      "duration" : 1545,
+      "end" : "2026-11-20T06:27:14Z",
+      "loudDuration" : 0,
+      "maxDB" : 76,
+      "sampleCount" : 14,
+      "source" : "AirPods Max",
+      "spans" : [
+        {
+          "end" : "2026-11-20T06:27:14Z",
+          "start" : "2026-11-20T06:01:29Z"
+        }
+      ],
+      "start" : "2026-11-20T06:01:29Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 74.60605187319885,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        0,
+        0,
+        81,
+        0,
+        266,
+        0,
+        0,
+        0,
+        0
+      ],
+      "duration" : 347,
+      "end" : "2026-11-20T06:44:29Z",
+      "loudDuration" : 0,
+      "maxDB" : 76.8,
+      "sampleCount" : 3,
+      "source" : "AirPods Max",
+      "spans" : [
+        {
+          "end" : "2026-11-20T06:44:29Z",
+          "start" : "2026-11-20T06:38:42Z"
+        }
+      ],
+      "start" : "2026-11-20T06:38:42Z",
+      "veryLoudDuration" : 0
+    },
+    {
+      "avgDB" : 68.384509202454,
+      "dbBuckets" : [
+        0,
+        0,
+        0,
+        0,
+        133,
+        360,
+        69,
+        90,
+        0,
+        0,
+        0,
+        0
+      ],
+      "duration" : 652,
+      "end" : "2026-11-20T07:07:29Z",
+      "loudDuration" : 0,
+      "maxDB" : 76.8,
+      "sampleCount" : 6,
+      "source" : "AirPods Max",
+      "spans" : [
+        {
+          "end" : "2026-11-20T07:07:29Z",
+          "start" : "2026-11-20T06:56:37Z"
+        }
+      ],
+      "start" : "2026-11-20T06:56:37Z",
+      "veryLoudDuration" : 0
+    }
+  ],
+  "summary" : {
+    "activeDays" : 39,
+    "averageActiveDay" : 4775.384615384615,
+    "averageDB" : 69.02590796821306,
+    "averageSession" : 1410.909090909091,
+    "currentStreak" : 7,
+    "deviceNames" : [
+      "AirPods Max",
+      "AirPods Pro",
+      "AirPods Pro 2",
+      "WH-1000XM5"
+    ],
+    "firstDate" : "2026-10-07T01:00:32Z",
+    "lastDate" : "2026-11-20T07:07:29Z",
+    "longestSession" : 4403,
+    "longestStreak" : 13,
+    "loudDuration" : 16823,
+    "peakDB" : 100,
+    "sampleCount" : 1612,
+    "sessionCount" : 132,
+    "spanDays" : 45,
+    "totalDuration" : 186240,
+    "veryLoudDuration" : 2691
+  },
+  "weeks" : [
+    {
+      "activeDays" : 5,
+      "duration" : 31981,
+      "sessionCount" : 19,
+      "weekStart" : "2026-10-04T16:00:00Z"
+    },
+    {
+      "activeDays" : 4,
+      "duration" : 19370,
+      "sessionCount" : 13,
+      "weekStart" : "2026-10-11T16:00:00Z"
+    },
+    {
+      "activeDays" : 7,
+      "duration" : 24714,
+      "sessionCount" : 18,
+      "weekStart" : "2026-10-18T16:00:00Z"
+    },
+    {
+      "activeDays" : 5,
+      "duration" : 16455,
+      "sessionCount" : 16,
+      "weekStart" : "2026-10-25T16:00:00Z"
+    },
+    {
+      "activeDays" : 7,
+      "duration" : 39572,
+      "sessionCount" : 27,
+      "weekStart" : "2026-11-01T16:00:00Z"
+    },
+    {
+      "activeDays" : 6,
+      "duration" : 26699,
+      "sessionCount" : 18,
+      "weekStart" : "2026-11-08T16:00:00Z"
+    },
+    {
+      "activeDays" : 5,
+      "duration" : 27449,
+      "sessionCount" : 21,
+      "weekStart" : "2026-11-15T16:00:00Z"
+    }
+  ]
+}

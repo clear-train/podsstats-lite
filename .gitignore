@@ -1,0 +1,26 @@
+# 构建产物
+.build/
+.swiftpm/
+dist/
+*.xcodeproj/
+*.xcworkspace/
+DerivedData/
+.DS_Store
+
+# ── 隐私：真机数据产物，一律不入库 ──────────────────────────
+# 这些文件是从你自己的 export.xml 跑出来的，含佩戴时间、设备名、
+# 每日时长。仓库里只放 make demo 生成的模拟数据。
+samples/report-real.*
+samples/sessions-real.csv
+docs/report-full.png
+# 兜底：任何看起来像真实导出的产物
+*-real.*
+*.real.json
+*.real.csv
+export.xml
+export.zip
+apple_health_export/
+
+# 备份文件
+*.bak
+*.orig

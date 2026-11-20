@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>耳机使用统计</title>
+<style>
+  :root {
+    --bg: #ffffff; --fg: #1d1d1f; --muted: #86868b; --line: #e8e8ed;
+    --accent: #0a84ff; --warn: #ff453a; --card: #f5f5f7;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#000; --fg:#f5f5f7; --muted:#8e8e93; --line:#2c2c2e; --card:#1c1c1e; }
+  }
+  * { box-sizing: border-box; }
+  body { margin:0 auto; max-width: 1000px; padding: 40px 24px 80px; background: var(--bg);
+         color: var(--fg); font: 15px/1.6 -apple-system, BlinkMacSystemFont, "SF Pro Text",
+         "PingFang SC", "Helvetica Neue", Arial, sans-serif;
+         -webkit-font-smoothing: antialiased; }
+  h1 { font-size: 28px; font-weight: 700; letter-spacing: -.02em; margin: 0 0 6px; }
+  h2 { font-size: 17px; font-weight: 650; margin: 36px 0 6px; letter-spacing: -.01em; }
+  .sub { color: var(--muted); font-size: 13px; margin-bottom: 22px; }
+  .muted { color: var(--muted); font-size: 13px; }
+
+  .rangebar { display: inline-flex; background: var(--card); border-radius: 9px; padding: 3px;
+              gap: 2px; margin-bottom: 20px; }
+  .rangebar button { border: 0; background: transparent; color: var(--muted); font: inherit;
+                     font-size: 13px; padding: 5px 14px; border-radius: 7px; cursor: pointer; }
+  .rangebar button.on { background: var(--bg); color: var(--fg); font-weight: 600;
+                        box-shadow: 0 1px 3px rgba(0,0,0,.12); }
+
+  .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  @media (max-width: 640px) { .cards { grid-template-columns: repeat(2, 1fr); } }
+  .card { background: var(--card); border-radius: 14px; padding: 15px 16px 13px; }
+  .ct { font-size: 12px; color: var(--muted); margin-bottom: 5px; }
+  .cv { font-size: 20px; font-weight: 650; letter-spacing: -.02em; font-variant-numeric: tabular-nums; }
+  .cs { font-size: 11px; color: var(--muted); margin-top: 3px; }
+
+  ul.insights { list-style: none; padding: 0; margin: 4px 0 0; }
+  ul.insights li { position: relative; padding: 4px 0 4px 18px; font-size: 14px; }
+  ul.insights li::before { content: "·"; position: absolute; left: 4px; color: var(--accent); font-weight: 700; }
+
+  .panel { background: var(--card); border-radius: 14px; padding: 16px 16px 12px; }
+  .bars-wrap { display: flex; align-items: flex-end; gap: 2px; height: 150px; padding-top: 10px; }
+  .bar { flex: 1 1 0; min-width: 1px; background: var(--accent); border-radius: 2px 2px 0 0;
+         transition: opacity .12s; position: relative; }
+  .bar.weekend { opacity: .45; }
+  .bar:hover { opacity: .7; }
+  .axis { display: grid; gap: 2px; font-size: 10px; color: var(--muted);
+          margin-top: 6px; }
+  .axis span { white-space: nowrap; overflow: visible; }
+
+  .heat { display: grid; grid-template-columns: 18px repeat(24, 1fr); gap: 2px; align-items: center; }
+  .heat .hd { font-size: 9px; color: var(--muted); text-align: center; }
+  .heat .rh { font-size: 10px; color: var(--muted); text-align: right; padding-right: 2px; }
+  .heat .cell { height: 17px; border-radius: 3px; background: var(--accent); opacity: .07; }
+  .heat .cell:hover { outline: 1.5px solid var(--accent); outline-offset: -1.5px; }
+  .heat-foot { display: grid; grid-template-columns: 18px repeat(24, 1fr); gap: 2px; font-size: 8px;
+               color: var(--muted); margin-top: 3px; }
+
+  .vbars { display: flex; flex-direction: column; gap: 7px; max-width: 660px; }
+  .vrow { display: grid; grid-template-columns: 62px 1fr 84px; align-items: center; gap: 10px; }
+  .vlabel { font-size: 11px; color: var(--muted); font-variant-numeric: tabular-nums; }
+  .vtrack { height: 9px; background: rgba(128,128,128,.16); border-radius: 5px; overflow: hidden; }
+  .vfill { display: block; height: 100%; background: var(--accent); border-radius: 5px; }
+  .vfill.loud { background: var(--warn); }
+  .vvalue { font-size: 11px; text-align: right; font-variant-numeric: tabular-nums; }
+
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th { text-align: left; font-weight: 500; color: var(--muted); font-size: 12px;
+       padding: 8px 10px; border-bottom: 1px solid var(--line); white-space: nowrap; }
+  td { padding: 8px 10px; border-bottom: 1px solid var(--line); }
+  .num { text-align: right; font-variant-numeric: tabular-nums; }
+  .hot { color: var(--warn); font-weight: 600; }
+  tr:hover td { background: rgba(128,128,128,.06); }
+  footer { margin-top: 48px; color: var(--muted); font-size: 12px;
+           border-top: 1px solid var(--line); padding-top: 14px; }
+  .empty { color: var(--muted); font-size: 13px; padding: 12px 0; }
+</style>
+</head>
+<body>
+<h1>耳机使用统计</h1>
+<div class="sub" id="meta"></div>
+
+<div class="rangebar" id="rangebar">
+  <button data-range="7">7 天</button>
+  <button data-range="30">30 天</button>
+  <button data-range="90">90 天</button>
+  <button data-range="all" class="on">全部</button>
+</div>
+
+<div class="cards" id="cards"></div>
+
+<h2>一眼结论</h2>
+<ul class="insights" id="insights"></ul>
+
+<h2>每日佩戴时长</h2>
+<div class="panel">
+  <div class="bars-wrap" id="daily"></div>
+  <div class="axis" id="axis"></div>
+</div>
+
+<h2>一周里的使用时段</h2>
+<div class="panel">
+  <div class="heat" id="heat"></div>
+  <div class="heat-foot" id="heatfoot"></div>
+  <div class="muted" style="margin-top:8px">颜色越深表示该时段累计佩戴越久；<span style="opacity:.45">浅色为周末</span></div>
+</div>
+
+<h2>音量分布</h2>
+<div class="panel" id="volume"></div>
+
+<h2>最长的佩戴记录</h2>
+<div class="panel" id="table"></div>
+
+<footer id="footer"></footer>
+
+<script id="data" type="application/json">{"meta":{"generated":"2026-11-20 14:31:07 +0800","gap":300,"note":"数据来自 Apple 健康「耳机音量」记录","file":"mock_export.xml"},"sessions":[{"b":[0,0,0,0,0,494,661,757,499,0,0,0],"mx":83.2,"src":"WH-1000XM5","vl":0,"g":[[1791334832,1791334902],[1791335183,1791337524]],"loud":499,"d":2411,"db":75.49406885109913,"s":1791334832,"n":21,"e":1791337524},{"b":[0,0,0,0,0,0,494,880,126,0,0,0],"mx":80.5,"src":"AirPods Max","vl":0,"g":[[1791345743,1791347243]],"loud":126,"d":1500,"db":76.38633333333334,"s":1791345743,"n":13,"e":1791347243},{"b":[0,0,0,0,0,0,665,525,121,0,0,0],"mx":81.1,"src":"AirPods Pro","vl":0,"g":[[1791367703,1791369014]],"loud":121,"d":1311,"db":75.22631578947369,"s":1791367703,"n":10,"e":1791369014},{"b":[0,0,0,0,0,265,767,826,713,0,98,0],"mx":94.3,"src":"AirPods Pro","vl":98,"g":[[1791369534,1791372203]],"loud":811,"d":2669,"db":76.60636942675158,"s":1791369534,"n":24,"e":1791372203},{"b":[0,0,1177,1163,380,266,0,0,0,0,0,0],"mx":67.1,"src":"AirPods Pro","vl":0,"g":[[1791417747,1791418261],[1791418515,1791420987]],"loud":0,"d":2986,"db":56.96704621567314,"s":1791417747,"n":26,"e":1791420987},{"b":[0,0,0,0,0,518,708,420,240,72,0,0],"mx":87.6,"src":"AirPods Pro","vl":0,"g":[[1791436201,1791438159]],"loud":312,"d":1958,"db":73.47768130745658,"s":1791436201,"n":17,"e":1791438159},{"b":[0,0,0,0,0,0,0,61,0,0,0,0],"mx":76.9,"src":"AirPods Pro","vl":0,"g":[[1791438900,1791438961]],"loud":0,"d":61,"db":76.9,"s":1791438900,"n":1,"e":1791438961},{"b":[0,0,460,451,643,372,0,0,0,0,0,0],"mx":67.9,"src":"WH-1000XM5","vl":0,"g":[[1791439905,1791441315],[1791441440,1791441589],[1791441758,1791442125]],"loud":0,"d":1926,"db":60.199844236760136,"s":1791439905,"n":17,"e":1791442125},{"b":[0,0,0,96,553,426,346,69,0,0,0,0],"mx":76.2,"src":"WH-1000XM5","vl":0,"g":[[1791508334,1791509824]],"loud":0,"d":1490,"db":66.64993288590604,"s":1791508334,"n":13,"e":1791509824},{"b":[0,0,0,0,452,609,623,0,0,0,0,0],"mx":73.5,"src":"WH-1000XM5","vl":0,"g":[[1791510190,1791511874]],"loud":0,"d":1684,"db":68.03640142517816,"s":1791510190,"n":14,"e":1791511874},{"b":[0,0,0,0,414,1009,978,354,111,134,0,0],"mx":88.3,"src":"WH-1000XM5","vl":0,"g":[[1791523000,1791526000]],"loud":245,"d":3000,"db":71.18150000000001,"s":1791523000,"n":26,"e":1791526000},{"b":[0,0,0,142,254,353,0,0,0,131,0,0],"mx":85.2,"src":"WH-1000XM5","vl":0,"g":[[1791540653,1791541533]],"loud":131,"d":880,"db":66.16579545454546,"s":1791540653,"n":7,"e":1791541533},{"b":[0,0,286,345,729,839,66,0,0,0,0,0],"mx":73.5,"src":"WH-1000XM5","vl":0,"g":[[1791542137,1791544402]],"loud":0,"d":2265,"db":62.1866225165563,"s":1791542137,"n":19,"e":1791544402},{"b":[0,0,0,325,159,0,0,0,0,0,0,0],"mx":63.2,"src":"WH-1000XM5","vl":0,"g":[[1791545149,1791545633]],"loud":0,"d":484,"db":59.18657024793389,"s":1791545149,"n":4,"e":1791545633},{"b":[0,0,0,67,694,664,479,0,0,0,0,0],"mx":74.8,"src":"AirPods Max","vl":0,"g":[[1791594612,1791596516]],"loud":0,"d":1904,"db":66.34506302521008,"s":1791594612,"n":18,"e":1791596516},{"b":[0,0,0,0,0,205,813,738,313,0,0,147],"mx":98.1,"src":"AirPods Pro","vl":147,"g":[[1791677053,1791679201],[1791679325,1791679393]],"loud":460,"d":2216,"db":77.42360108303247,"s":1791677053,"n":17,"e":1791679393},{"b":[0,0,613,486,160,0,0,0,0,0,0,0],"mx":64.9,"src":"AirPods Pro","vl":0,"g":[[1791691364,1791691445],[1791691625,1791691859],[1791692154,1791693098]],"loud":0,"d":1259,"db":55.73566322478157,"s":1791691364,"n":12,"e":1791693098},{"b":[0,0,0,113,0,374,0,0,0,0,0,0],"mx":67.2,"src":"WH-1000XM5","vl":0,"g":[[1791698488,1791698975]],"loud":0,"d":487,"db":64.8618069815195,"s":1791698488,"n":4,"e":1791698975},{"b":[0,0,0,292,461,449,171,0,117,0,0,0],"mx":82.7,"src":"WH-1000XM5","vl":0,"g":[[1791699758,1791701248]],"loud":117,"d":1490,"db":65.15221476510067,"s":1791699758,"n":14,"e":1791701248},{"b":[0,0,0,0,956,620,829,152,0,0,0,0],"mx":75.7,"src":"WH-1000XM5","vl":0,"g":[[1791763925,1791766482]],"loud":0,"d":2557,"db":68.26069612827531,"s":1791763925,"n":21,"e":1791766482},{"b":[0,0,0,0,0,472,646,621,520,0,213,108],"mx":96.3,"src":"AirPods Max","vl":321,"g":[[1791778004,1791780584]],"loud":841,"d":2580,"db":77.6436434108527,"s":1791778004,"n":22,"e":1791780584},{"b":[0,0,0,0,0,306,119,353,0,155,0,82],"mx":97.5,"src":"AirPods Pro 2","vl":82,"g":[[1791796599,1791797614]],"loud":237,"d":1015,"db":77.43093596059113,"s":1791796599,"n":8,"e":1791797614},{"b":[0,0,0,0,0,80,0,195,190,0,0,93],"mx":97.1,"src":"AirPods Pro 2","vl":93,"g":[[1791797996,1791798554]],"loud":283,"d":558,"db":80.87706093189963,"s":1791797996,"n":6,"e":1791798554},{"b":[0,0,0,0,300,433,368,0,0,0,0,0],"mx":72.8,"src":"AirPods Pro 2","vl":0,"g":[[1792117145,1792118246]],"loud":0,"d":1101,"db":67.65040871934605,"s":1792117145,"n":9,"e":1792118246},{"b":[0,0,0,296,421,441,282,0,0,0,0,0],"mx":72.4,"src":"AirPods Pro 2","vl":0,"g":[[1792118885,1792120325]],"loud":0,"d":1440,"db":65.25326388888888,"s":1792118885,"n":15,"e":1792120325},{"b":[0,0,0,0,0,79,0,0,0,0,0,0],"mx":68.9,"src":"WH-1000XM5","vl":0,"g":[[1792199342,1792199421]],"loud":0,"d":79,"db":68.9,"s":1792199342,"n":1,"e":1792199421},{"b":[0,0,0,0,0,0,1199,729,586,0,60,147],"mx":100,"src":"WH-1000XM5","vl":207,"g":[[1792199921,1792202642]],"loud":793,"d":2721,"db":77.45685409775817,"s":1792199921,"n":22,"e":1792202642},{"b":[0,0,0,891,503,433,0,0,0,0,0,0],"mx":69.4,"src":"AirPods Pro","vl":0,"g":[[1792213771,1792215598]],"loud":0,"d":1827,"db":61.54411603721949,"s":1792213771,"n":15,"e":1792215598},{"b":[0,0,0,238,454,299,0,0,0,0,0,0],"mx":68.6,"src":"AirPods Pro 2","vl":0,"g":[[1792220947,1792221938]],"loud":0,"d":991,"db":62.658627648839555,"s":1792220947,"n":8,"e":1792221938},{"b":[0,0,327,543,1082,704,0,78,0,0,0,0],"mx":79.8,"src":"AirPods Pro 2","vl":0,"g":[[1792222593,1792225327]],"loud":0,"d":2734,"db":62.60413313825895,"s":1792222593,"n":23,"e":1792225327},{"b":[0,0,0,0,0,229,65,0,0,0,0,0],"mx":71.7,"src":"WH-1000XM5","vl":0,"g":[[1792286217,1792286511]],"loud":0,"d":294,"db":68.48809523809524,"s":1792286217,"n":3,"e":1792286511},{"b":[0,0,0,0,103,289,527,304,250,0,0,0],"mx":80.4,"src":"WH-1000XM5","vl":0,"g":[[1792287084,1792288557]],"loud":250,"d":1473,"db":72.5243041412084,"s":1792287084,"n":13,"e":1792288557},{"b":[0,0,0,283,521,680,0,196,0,0,0,0],"mx":77.8,"src":"AirPods Pro","vl":0,"g":[[1792376040,1792377720]],"loud":0,"d":1680,"db":65.08125,"s":1792376040,"n":17,"e":1792377720},{"b":[0,0,326,1037,881,334,113,129,0,0,0,0],"mx":78.6,"src":"AirPods Pro","vl":0,"g":[[1792386002,1792388822]],"loud":0,"d":2820,"db":60.868687943262415,"s":1792386002,"n":23,"e":1792388822},{"b":[0,0,0,0,186,321,313,440,0,0,0,0],"mx":76.7,"src":"AirPods Pro","vl":0,"g":[[1792455113,1792456373]],"loud":0,"d":1260,"db":70.77857142857142,"s":1792455113,"n":11,"e":1792456373},{"b":[0,0,0,0,240,0,0,0,0,0,0,0],"mx":64,"src":"WH-1000XM5","vl":0,"g":[[1792469175,1792469415]],"loud":0,"d":240,"db":63.11708333333333,"s":1792469175,"n":2,"e":1792469415},{"b":[0,0,0,0,71,573,296,362,177,0,90,0],"mx":93.6,"src":"WH-1000XM5","vl":90,"g":[[1792470186,1792471755]],"loud":267,"d":1569,"db":73.56755895474824,"s":1792470186,"n":14,"e":1792471755},{"b":[0,0,0,0,127,400,516,895,0,105,117,0],"mx":93.7,"src":"AirPods Pro 2","vl":117,"g":[[1792545436,1792547596]],"loud":222,"d":2160,"db":74.73949074074075,"s":1792545436,"n":20,"e":1792547596},{"b":[0,0,0,0,0,0,0,109,175,0,0,0],"mx":84.9,"src":"WH-1000XM5","vl":0,"g":[[1792631452,1792631736]],"loud":175,"d":284,"db":81.82957746478874,"s":1792631452,"n":2,"e":1792631736},{"b":[0,0,0,0,0,178,246,181,750,0,0,0],"mx":82.8,"src":"WH-1000XM5","vl":0,"g":[[1792632564,1792633919]],"loud":750,"d":1355,"db":78.16560885608857,"s":1792632564,"n":12,"e":1792633919},{"b":[0,0,0,0,388,513,222,737,0,0,0,0],"mx":79.4,"src":"AirPods Max","vl":0,"g":[[1792645968,1792647828]],"loud":0,"d":1860,"db":71.22456989247314,"s":1792645968,"n":14,"e":1792647828},{"b":[0,0,0,256,533,0,229,0,0,0,131,0],"mx":90.4,"src":"AirPods Pro 2","vl":131,"g":[[1792656353,1792657502]],"loud":131,"d":1149,"db":66.99869451697127,"s":1792656353,"n":10,"e":1792657502},{"b":[0,0,0,182,350,318,424,0,0,0,0,0],"mx":73.3,"src":"AirPods Pro 2","vl":0,"g":[[1792658139,1792659413]],"loud":0,"d":1274,"db":66.28932496075353,"s":1792658139,"n":13,"e":1792659413},{"b":[0,0,0,0,0,205,374,407,0,0,0,0],"mx":78.4,"src":"AirPods Pro 2","vl":0,"g":[[1792714461,1792715447]],"loud":0,"d":986,"db":73.61490872210953,"s":1792714461,"n":8,"e":1792715447},{"b":[0,0,0,0,0,230,338,159,0,0,0,0],"mx":75.6,"src":"AirPods Pro 2","vl":0,"g":[[1792716074,1792716801]],"loud":0,"d":727,"db":71.62365887207703,"s":1792716074,"n":7,"e":1792716801},{"b":[0,0,0,0,276,354,435,482,0,0,0,0],"mx":76.8,"src":"AirPods Pro 2","vl":0,"g":[[1792803908,1792805455]],"loud":0,"d":1547,"db":70.38907563025211,"s":1792803908,"n":13,"e":1792805455},{"b":[0,0,0,0,273,511,313,140,0,0,0,0],"mx":77,"src":"AirPods Pro 2","vl":0,"g":[[1792806151,1792807388]],"loud":0,"d":1237,"db":69.72813257881973,"s":1792806151,"n":11,"e":1792807388},{"b":[0,0,0,0,0,0,344,324,227,0,0,0],"mx":84.1,"src":"AirPods Max","vl":0,"g":[[1792819724,1792820619]],"loud":227,"d":895,"db":76.81765363128493,"s":1792819724,"n":8,"e":1792820619},{"b":[0,0,0,0,0,0,733,1053,265,0,0,0],"mx":80.9,"src":"AirPods Pro 2","vl":0,"g":[[1792890004,1792891713],[1792892002,1792892344]],"loud":265,"d":2051,"db":76.90014627011213,"s":1792890004,"n":17,"e":1792892344},{"b":[0,0,0,0,82,544,496,498,0,0,0,0],"mx":78.8,"src":"AirPods Max","vl":0,"g":[[1792901744,1792903364]],"loud":0,"d":1620,"db":71.26549382716048,"s":1792901744,"n":15,"e":1792903364},{"b":[0,0,0,498,87,411,0,0,0,0,0,0],"mx":69.4,"src":"WH-1000XM5","vl":0,"g":[[1792973797,1792974793]],"loud":0,"d":996,"db":62.095281124498,"s":1792973797,"n":8,"e":1792974793},{"b":[0,0,0,0,137,0,0,0,0,0,0,0],"mx":62.5,"src":"WH-1000XM5","vl":0,"g":[[1792975160,1792975297]],"loud":0,"d":137,"db":62.5,"s":1792975160,"n":1,"e":1792975297},{"b":[0,0,0,212,625,737,94,0,0,0,0,0],"mx":70.8,"src":"AirPods Pro 2","vl":0,"g":[[1792991914,1792992202],[1792992334,1792993714]],"loud":0,"d":1668,"db":64.33549160671463,"s":1792991914,"n":16,"e":1792993714},{"b":[0,0,0,0,808,984,635,432,0,0,81,0],"mx":92.6,"src":"WH-1000XM5","vl":81,"g":[[1793062908,1793065848]],"loud":81,"d":2940,"db":69.74608843537415,"s":1793062908,"n":24,"e":1793065848},{"b":[0,0,0,0,0,338,277,0,0,0,0,0],"mx":74.1,"src":"AirPods Max","vl":0,"g":[[1793074544,1793075159]],"loud":0,"d":615,"db":69.22699186991869,"s":1793074544,"n":5,"e":1793075159},{"b":[0,0,0,0,219,307,509,229,95,0,0,0],"mx":80.3,"src":"AirPods Max","vl":0,"g":[[1793075619,1793076978]],"loud":95,"d":1359,"db":70.65275938189845,"s":1793075619,"n":12,"e":1793076978},{"b":[0,0,0,0,345,503,720,0,0,0,0,0],"mx":73,"src":"AirPods Pro 2","vl":0,"g":[[1793153734,1793154713],[1793154979,1793155568]],"loud":0,"d":1568,"db":67.81103316326531,"s":1793153734,"n":13,"e":1793155568},{"b":[0,0,0,0,436,259,343,0,0,0,0,0],"mx":73,"src":"AirPods Pro 2","vl":0,"g":[[1793155919,1793156422],[1793156546,1793157081]],"loud":0,"d":1038,"db":67.22263969171483,"s":1793155919,"n":8,"e":1793157081},{"b":[0,0,0,0,0,174,0,145,143,0,0,0],"mx":84.3,"src":"WH-1000XM5","vl":0,"g":[[1793160620,1793161082]],"loud":143,"d":462,"db":75.87619047619049,"s":1793160620,"n":3,"e":1793161082},{"b":[0,0,0,0,0,272,449,252,472,0,73,0],"mx":94.8,"src":"WH-1000XM5","vl":73,"g":[[1793161922,1793163440]],"loud":545,"d":1518,"db":76.93056653491435,"s":1793161922,"n":12,"e":1793163440},{"b":[0,0,0,206,0,134,0,0,0,0,0,0],"mx":68.2,"src":"WH-1000XM5","vl":0,"g":[[1793412997,1793413337]],"loud":0,"d":340,"db":62.47352941176471,"s":1793412997,"n":3,"e":1793413337},{"b":[0,0,0,144,570,117,87,0,128,0,0,0],"mx":82.8,"src":"WH-1000XM5","vl":0,"g":[[1793413933,1793414979]],"loud":128,"d":1046,"db":65.13585086042066,"s":1793413933,"n":9,"e":1793414979},{"b":[0,0,0,0,0,0,0,184,0,0,0,0],"mx":78.1,"src":"AirPods Max","vl":0,"g":[[1793494878,1793495062]],"loud":0,"d":184,"db":77.31576086956521,"s":1793494878,"n":2,"e":1793495062},{"b":[0,0,0,0,0,313,212,199,288,106,0,0],"mx":89.4,"src":"AirPods Max","vl":0,"g":[[1793495742,1793496860]],"loud":394,"d":1118,"db":75.74919499105546,"s":1793495742,"n":9,"e":1793496860},{"b":[0,0,0,0,0,227,150,728,358,0,0,0],"mx":84.1,"src":"AirPods Pro","vl":0,"g":[[1793505997,1793507460]],"loud":358,"d":1463,"db":77.67669172932332,"s":1793505997,"n":12,"e":1793507460},{"b":[0,0,0,0,0,0,0,3,0,0,0,0],"mx":75.3,"src":"AirPods Pro","vl":0,"g":[[1793508034,1793508037]],"loud":0,"d":3,"db":75.3,"s":1793508034,"n":1,"e":1793508037},{"b":[0,0,619,1213,914,200,69,98,127,0,0,0],"mx":83.6,"src":"AirPods Pro 2","vl":0,"g":[[1793585343,1793588583]],"loud":127,"d":3240,"db":60.548425925925926,"s":1793585343,"n":31,"e":1793588583},{"b":[0,0,0,0,532,799,1009,0,0,0,0,0],"mx":73.8,"src":"AirPods Pro 2","vl":0,"g":[[1793667956,1793670296]],"loud":0,"d":2340,"db":68.16034188034189,"s":1793667956,"n":20,"e":1793670296},{"b":[0,0,0,0,0,84,245,384,532,0,0,0],"mx":82.5,"src":"WH-1000XM5","vl":0,"g":[[1793678524,1793679769]],"loud":532,"d":1245,"db":77.40024096385542,"s":1793678524,"n":11,"e":1793679769},{"b":[0,0,0,0,0,0,266,93,323,0,0,0],"mx":82.5,"src":"WH-1000XM5","vl":0,"g":[[1793680404,1793681086]],"loud":323,"d":682,"db":78.1032258064516,"s":1793680404,"n":6,"e":1793681086},{"b":[0,0,0,493,965,721,354,0,0,0,0,0],"mx":72.2,"src":"AirPods Max","vl":0,"g":[[1793696404,1793698937]],"loud":0,"d":2533,"db":64.5233320173707,"s":1793696404,"n":21,"e":1793698937},{"b":[0,0,0,95,109,111,0,0,0,0,0,0],"mx":65.1,"src":"AirPods Max","vl":0,"g":[[1793699630,1793699945]],"loud":0,"d":315,"db":63.048253968253974,"s":1793699630,"n":3,"e":1793699945},{"b":[0,0,0,0,170,0,0,0,0,0,0,0],"mx":61.6,"src":"AirPods Max","vl":0,"g":[[1793700506,1793700676]],"loud":0,"d":170,"db":61.6,"s":1793700506,"n":1,"e":1793700676},{"b":[0,0,0,260,180,125,0,0,0,0,0,0],"mx":68.3,"src":"AirPods Max","vl":0,"g":[[1793700999,1793701564]],"loud":0,"d":565,"db":61.92637168141592,"s":1793700999,"n":5,"e":1793701564},{"b":[0,0,85,636,1009,1030,0,0,0,0,0,0],"mx":69.3,"src":"WH-1000XM5","vl":0,"g":[[1793758702,1793761462]],"loud":0,"d":2760,"db":62.846884057971025,"s":1793758702,"n":26,"e":1793761462},{"b":[0,0,0,0,0,108,221,240,833,0,0,0],"mx":84,"src":"AirPods Max","vl":0,"g":[[1793768737,1793770139]],"loud":833,"d":1402,"db":78.76476462196862,"s":1793768737,"n":11,"e":1793770139},{"b":[0,0,0,0,0,138,171,270,136,0,0,0],"mx":83.8,"src":"AirPods Max","vl":0,"g":[[1793770482,1793771197]],"loud":136,"d":715,"db":76.38097902097903,"s":1793770482,"n":6,"e":1793771197},{"b":[0,0,0,662,943,1175,1380,134,0,109,0,0],"mx":85.1,"src":"AirPods Max","vl":0,"g":[[1793783863,1793788266]],"loud":109,"d":4403,"db":67.09295934590052,"s":1793783863,"n":39,"e":1793788266},{"b":[0,0,0,0,166,186,307,0,0,0,0,0],"mx":73.1,"src":"AirPods Max","vl":0,"g":[[1793788664,1793789323]],"loud":0,"d":659,"db":69.35144157814872,"s":1793788664,"n":5,"e":1793789323},{"b":[0,0,0,120,319,472,221,0,0,0,0,0],"mx":71.4,"src":"WH-1000XM5","vl":0,"g":[[1793837464,1793838596]],"loud":0,"d":1132,"db":64.8226148409894,"s":1793837464,"n":9,"e":1793838596},{"b":[0,0,0,0,488,113,243,0,0,0,0,0],"mx":72.1,"src":"WH-1000XM5","vl":0,"g":[[1793839200,1793840044]],"loud":0,"d":844,"db":65.60284360189573,"s":1793839200,"n":7,"e":1793840044},{"b":[0,0,0,426,421,897,148,88,0,0,0,0],"mx":76.1,"src":"AirPods Pro 2","vl":0,"g":[[1793851852,1793853832]],"loud":0,"d":1980,"db":65.47873737373737,"s":1793851852,"n":17,"e":1793853832},{"b":[0,0,0,0,329,301,146,104,113,78,0,0],"mx":86.3,"src":"WH-1000XM5","vl":0,"g":[[1793927186,1793928257]],"loud":191,"d":1071,"db":70.26862745098039,"s":1793927186,"n":10,"e":1793928257},{"b":[0,0,0,0,0,83,135,0,0,0,0,0],"mx":72.7,"src":"WH-1000XM5","vl":0,"g":[[1793928648,1793928866]],"loud":0,"d":218,"db":71.59587155963303,"s":1793928648,"n":2,"e":1793928866},{"b":[0,0,164,749,143,80,0,0,0,0,0,0],"mx":66.2,"src":"AirPods Pro","vl":0,"g":[[1794017506,1794018642]],"loud":0,"d":1136,"db":57.92227112676056,"s":1794017506,"n":9,"e":1794018642},{"b":[0,0,0,137,318,904,140,0,63,255,0,0],"mx":89.6,"src":"AirPods Pro","vl":0,"g":[[1794027666,1794029483]],"loud":318,"d":1817,"db":69.7465602641717,"s":1794027666,"n":18,"e":1794029483},{"b":[0,0,0,0,122,325,0,0,0,0,0,0],"mx":69.8,"src":"AirPods Pro","vl":0,"g":[[1794030159,1794030606]],"loud":0,"d":447,"db":66.93467561521253,"s":1794030159,"n":4,"e":1794030606},{"b":[0,0,0,485,570,235,70,133,0,155,0,0],"mx":88,"src":"AirPods Max","vl":0,"g":[[1794031586,1794033234]],"loud":155,"d":1648,"db":66.02469660194176,"s":1794031586,"n":14,"e":1794033234},{"b":[0,0,0,145,166,151,0,62,0,0,0,0],"mx":76.8,"src":"AirPods Max","vl":0,"g":[[1794033995,1794034519]],"loud":0,"d":524,"db":64.81984732824428,"s":1794033995,"n":5,"e":1794034519},{"b":[0,0,0,400,1016,1004,521,0,87,0,0,0],"mx":82.7,"src":"AirPods Max","vl":0,"g":[[1794035158,1794038186]],"loud":87,"d":3028,"db":65.67853368560105,"s":1794035158,"n":25,"e":1794038186},{"b":[0,0,0,194,229,283,237,0,0,0,0,0],"mx":73.2,"src":"WH-1000XM5","vl":0,"g":[[1794056894,1794057837]],"loud":0,"d":943,"db":65.80137857900318,"s":1794056894,"n":8,"e":1794057837},{"b":[0,0,0,505,977,575,138,0,0,0,0,0],"mx":71.8,"src":"WH-1000XM5","vl":0,"g":[[1794058299,1794060494]],"loud":0,"d":2195,"db":63.356765375854216,"s":1794058299,"n":22,"e":1794060494},{"b":[0,0,0,0,0,226,629,498,207,0,0,0],"mx":80.4,"src":"AirPods Pro","vl":0,"g":[[1794096884,1794098444]],"loud":207,"d":1560,"db":74.09185897435897,"s":1794096884,"n":14,"e":1794098444},{"b":[0,0,0,0,66,266,74,0,0,0,0,0],"mx":70.3,"src":"AirPods Pro 2","vl":0,"g":[[1794183205,1794183611]],"loud":0,"d":406,"db":67.1115763546798,"s":1794183205,"n":4,"e":1794183611},{"b":[0,0,0,0,357,801,184,561,0,0,0,0],"mx":79.2,"src":"AirPods Pro 2","vl":0,"g":[[1794183942,1794185845]],"loud":0,"d":1903,"db":70.60940620073569,"s":1794183942,"n":18,"e":1794185845},{"b":[0,0,0,0,0,0,158,63,266,0,118,0],"mx":90.5,"src":"WH-1000XM5","vl":118,"g":[[1794272610,1794273215]],"loud":384,"d":605,"db":79.84710743801652,"s":1794272610,"n":5,"e":1794273215},{"b":[0,0,0,0,0,590,402,460,269,0,0,176],"mx":96.3,"src":"WH-1000XM5","vl":176,"g":[[1794273593,1794275490]],"loud":445,"d":1897,"db":76.17538218239325,"s":1794273593,"n":16,"e":1794275490},{"b":[0,0,141,1189,890,0,0,0,0,0,0,0],"mx":64.4,"src":"AirPods Pro 2","vl":0,"g":[[1794283809,1794286029]],"loud":0,"d":2220,"db":59.42927927927929,"s":1794283809,"n":19,"e":1794286029},{"b":[0,0,0,100,94,0,0,0,0,0,0,0],"mx":60.7,"src":"AirPods Pro","vl":0,"g":[[1794301245,1794301439]],"loud":0,"d":194,"db":60.132989690721644,"s":1794301245,"n":2,"e":1794301439},{"b":[0,0,0,518,744,894,0,132,0,0,0,0],"mx":78.5,"src":"AirPods Pro","vl":0,"g":[[1794302292,1794302655],[1794302888,1794304477],[1794304749,1794305085]],"loud":0,"d":2288,"db":64.59322552447553,"s":1794302292,"n":21,"e":1794305085},{"b":[0,0,0,0,194,530,979,862,0,138,117,0],"mx":92.4,"src":"AirPods Pro 2","vl":117,"g":[[1794363567,1794366387]],"loud":255,"d":2820,"db":73.9536524822695,"s":1794363567,"n":23,"e":1794366387},{"b":[0,0,232,407,504,0,155,0,0,0,0,0],"mx":73.6,"src":"AirPods Max","vl":0,"g":[[1794373814,1794374717],[1794374872,1794375110],[1794375242,1794375399]],"loud":0,"d":1298,"db":60.64645608628659,"s":1794373814,"n":10,"e":1794375399},{"b":[0,0,0,0,0,0,123,0,0,0,0,0],"mx":74.3,"src":"AirPods Max","vl":0,"g":[[1794384654,1794384777]],"loud":0,"d":123,"db":74.3,"s":1794384654,"n":1,"e":1794384777},{"b":[0,0,0,0,491,1215,782,1012,0,223,171,0],"mx":90.8,"src":"AirPods Max","vl":171,"g":[[1794385500,1794389394]],"loud":394,"d":3894,"db":72.61687211093992,"s":1794385500,"n":32,"e":1794389394},{"b":[0,0,0,0,0,613,1026,401,0,0,0,0],"mx":77.2,"src":"AirPods Pro","vl":0,"g":[[1794449533,1794451573]],"loud":0,"d":2040,"db":71.77607843137255,"s":1794449533,"n":18,"e":1794451573},{"b":[0,0,0,321,384,495,0,0,0,0,0,0],"mx":68.2,"src":"AirPods Pro","vl":0,"g":[[1794457075,1794458275]],"loud":0,"d":1200,"db":63.372833333333325,"s":1794457075,"n":11,"e":1794458275},{"b":[0,0,0,0,297,212,217,124,0,176,0,174],"mx":95.7,"src":"AirPods Pro 2","vl":174,"g":[[1794622617,1794623817]],"loud":350,"d":1200,"db":75.90858333333334,"s":1794622617,"n":11,"e":1794623817},{"b":[0,0,0,132,278,326,280,244,0,0,0,0],"mx":79.3,"src":"AirPods Pro","vl":0,"g":[[1794633522,1794634782]],"loud":0,"d":1260,"db":68.70785714285714,"s":1794633522,"n":12,"e":1794634782},{"b":[0,0,0,0,838,291,998,585,0,0,0,0],"mx":77.8,"src":"WH-1000XM5","vl":0,"g":[[1794651123,1794651809],[1794652000,1794654026]],"loud":0,"d":2712,"db":70.33244837758112,"s":1794651123,"n":22,"e":1794654026},{"b":[0,0,0,0,110,0,163,0,119,0,0,0],"mx":82,"src":"AirPods Max","vl":0,"g":[[1794706156,1794706548]],"loud":119,"d":392,"db":73.2357142857143,"s":1794706156,"n":3,"e":1794706548},{"b":[0,0,0,0,94,0,108,45,0,0,0,0],"mx":77.8,"src":"AirPods Max","vl":0,"g":[[1794706945,1794707192]],"loud":0,"d":247,"db":70.89635627530365,"s":1794706945,"n":3,"e":1794707192},{"b":[0,0,341,405,401,117,142,0,0,0,0,0],"mx":70.7,"src":"AirPods Pro","vl":0,"g":[[1794788323,1794789729]],"loud":0,"d":1406,"db":59.765504978662875,"s":1794788323,"n":11,"e":1794789729},{"b":[0,0,0,0,660,134,254,0,0,0,0,0],"mx":74.4,"src":"AirPods Pro","vl":0,"g":[[1794802734,1794803782]],"loud":0,"d":1048,"db":66.28253816793894,"s":1794802734,"n":9,"e":1794803782},{"b":[0,0,153,539,541,613,0,0,0,0,0,0],"mx":67.6,"src":"WH-1000XM5","vl":0,"g":[[1794881969,1794883815]],"loud":0,"d":1846,"db":61.62497291440954,"s":1794881969,"n":16,"e":1794883815},{"b":[0,0,0,0,166,0,115,0,0,0,178,0],"mx":92.4,"src":"AirPods Pro","vl":178,"g":[[1794891822,1794892281]],"loud":178,"d":459,"db":76.82047930283224,"s":1794891822,"n":3,"e":1794892281},{"b":[0,0,0,0,0,175,66,0,0,0,0,0],"mx":72.6,"src":"AirPods Pro","vl":0,"g":[[1794892841,1794893082]],"loud":0,"d":241,"db":69.27261410788381,"s":1794892841,"n":3,"e":1794893082},{"b":[0,0,0,0,0,79,632,160,433,0,0,0],"mx":83.5,"src":"AirPods Pro","vl":0,"g":[[1794967224,1794968253],[1794968449,1794968724]],"loud":433,"d":1304,"db":76.13174846625768,"s":1794967224,"n":10,"e":1794968724},{"b":[0,0,0,467,497,331,393,0,0,0,0,0],"mx":71.6,"src":"WH-1000XM5","vl":0,"g":[[1794979086,1794980774]],"loud":0,"d":1688,"db":64.44336492890994,"s":1794979086,"n":15,"e":1794980774},{"b":[0,0,0,0,0,505,896,1160,536,102,101,0],"mx":93.1,"src":"AirPods Max","vl":101,"g":[[1794996677,1794999977]],"loud":739,"d":3300,"db":76.10396969696971,"s":1794996677,"n":28,"e":1794999977},{"b":[0,0,0,0,0,71,260,110,286,0,0,0],"mx":82.5,"src":"AirPods Pro","vl":0,"g":[[1795051147,1795051874]],"loud":286,"d":727,"db":76.15460797799174,"s":1795051147,"n":6,"e":1795051874},{"b":[0,0,0,0,0,0,969,796,600,70,0,73],"mx":100,"src":"AirPods Pro","vl":73,"g":[[1795052239,1795054747]],"loud":743,"d":2508,"db":77.87041467304623,"s":1795052239,"n":22,"e":1795054747},{"b":[0,0,0,0,0,355,1004,296,329,0,79,0],"mx":91.1,"src":"AirPods Pro 2","vl":79,"g":[[1795061198,1795061282],[1795061499,1795063478]],"loud":408,"d":2063,"db":74.61202132816288,"s":1795061198,"n":18,"e":1795063478},{"b":[0,0,0,0,106,259,0,0,0,0,0,0],"mx":69,"src":"WH-1000XM5","vl":0,"g":[[1795069030,1795069395]],"loud":0,"d":365,"db":66.09534246575342,"s":1795069030,"n":4,"e":1795069395},{"b":[0,0,0,0,444,96,199,0,0,0,0,0],"mx":73.2,"src":"WH-1000XM5","vl":0,"g":[[1795069984,1795070723]],"loud":0,"d":739,"db":66.06711772665764,"s":1795069984,"n":6,"e":1795070723},{"b":[0,0,0,0,1128,141,656,0,0,0,0,0],"mx":74.5,"src":"WH-1000XM5","vl":0,"g":[[1795071613,1795073538]],"loud":0,"d":1925,"db":66.38716883116882,"s":1795071613,"n":15,"e":1795073538},{"b":[0,0,0,0,244,392,195,336,0,0,64,0],"mx":93.5,"src":"WH-1000XM5","vl":64,"g":[[1795073859,1795075090]],"loud":64,"d":1231,"db":71.18009748172219,"s":1795073859,"n":11,"e":1795075090},{"b":[0,0,0,0,241,244,0,95,0,0,0,0],"mx":77,"src":"WH-1000XM5","vl":0,"g":[[1795137378,1795137958]],"loud":0,"d":580,"db":66.53189655172413,"s":1795137378,"n":5,"e":1795137958},{"b":[0,0,245,376,392,542,0,0,0,0,0,0],"mx":67.7,"src":"WH-1000XM5","vl":0,"g":[[1795138523,1795140078]],"loud":0,"d":1555,"db":61.18598070739549,"s":1795138523,"n":13,"e":1795140078},{"b":[0,0,0,464,150,593,713,0,0,0,0,0],"mx":71.8,"src":"AirPods Max","vl":0,"g":[[1795148009,1795149929]],"loud":0,"d":1920,"db":66.17755208333332,"s":1795148009,"n":16,"e":1795149929},{"b":[0,0,0,0,145,689,579,132,0,0,0,0],"mx":76,"src":"AirPods Max","vl":0,"g":[[1795154489,1795156034]],"loud":0,"d":1545,"db":68.89281553398058,"s":1795154489,"n":14,"e":1795156034},{"b":[0,0,0,0,0,81,0,266,0,0,0,0],"mx":76.8,"src":"AirPods Max","vl":0,"g":[[1795156722,1795157069]],"loud":0,"d":347,"db":74.60605187319885,"s":1795156722,"n":3,"e":1795157069},{"b":[0,0,0,0,133,360,69,90,0,0,0,0],"mx":76.8,"src":"AirPods Max","vl":0,"g":[[1795157797,1795158449]],"loud":0,"d":652,"db":68.384509202454,"s":1795157797,"n":6,"e":1795158449}]}</script>
+<script>
+(function () {
+  const DATA = JSON.parse(document.getElementById('data').textContent);
+  const SESSIONS = DATA.sessions || [];
+  const META = DATA.meta || {};
+  let range = 'all';
+
+  // ---------- 工具 ----------
+  function fmtDur(sec) {
+    const minutes = Math.round((sec || 0) / 60);
+    const h = Math.floor(minutes / 60);
+    const m = minutes % 60;
+    if (h > 0) return h + ' 小时' + (m > 0 ? ' ' + String(m).padStart(2, '0') + ' 分' : '');
+    return minutes + ' 分钟';
+  }
+  function fmtShort(sec) {
+    const t = Math.round(sec || 0);
+    return Math.floor(t / 3600) + ':' + String(Math.round((t % 3600) / 60)).padStart(2, '0');
+  }
+  const WEEK = ['周日','周一','周二','周三','周四','周五','周六'];
+  function dayKey(d) {
+    return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
+  }
+  function startOfDay(ts) {
+    const d = new Date(ts * 1000);
+    return new Date(d.getFullYear(), d.getMonth(), d.getDate()).getTime() / 1000;
+  }
+  function nextDayStart(ts) {
+    const d = new Date(ts * 1000);
+    return new Date(d.getFullYear(), d.getMonth(), d.getDate() + 1).getTime() / 1000;
+  }
+  // 会话内真正有样本的区间（会话中间可能摘过耳机）
+  function spansOf(s) { return (s.g && s.g.length) ? s.g : [[s.s, s.e]]; }
+  // 沿真实区间遍历，step 返回下一个切分点
+  function walkSpans(list, step) {
+    for (const s of list) {
+      const spans = spansOf(s);
+      for (const sp of spans) {
+        let cur = sp[0], guardCount = 0;
+        while (cur < sp[1] && guardCount++ < 3000) {
+          const next = step(cur, sp[1], s);
+          if (!(next > cur)) break;
+          cur = next;
+        }
+      }
+    }
+  }
+  function esc(s) {
+    return String(s == null ? '' : s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+  }
+
+  // ---------- 过滤 ----------
+  const lastEnd = SESSIONS.length ? Math.max.apply(null, SESSIONS.map(s => s.e)) : 0;
+
+  function inRange() {
+    if (range === 'all') return SESSIONS.slice();
+    const cutoff = lastEnd - Number(range) * 86400;
+    return SESSIONS.filter(s => s.e >= cutoff);
+  }
+
+  // ---------- 统计 ----------
+  function computeStats(list) {
+    let total = 0, loud = 0, veryLoud = 0, longest = 0, peak = 0;
+    let dbWeighted = 0, dbSeconds = 0;
+    const byDay = new Map();
+    for (const s of list) {
+      const dur = s.d;
+      total += dur;
+      loud += s.loud || 0;
+      veryLoud += s.vl || 0;
+      longest = Math.max(longest, dur);
+      if (s.mx > peak) peak = s.mx;
+      if (s.db > 0 && dur > 0) { dbWeighted += s.db * dur; dbSeconds += dur; }
+    }
+    // 按天累计（只算真正有样本的区间）
+    walkSpans(list, function (cur, spanEnd, s) {
+      const pieceEnd = Math.min(spanEnd, nextDayStart(cur));
+      const key = dayKey(new Date(cur * 1000));
+      const rec = byDay.get(key) || { sec: 0, sessions: 0, maxDb: 0 };
+      rec.sec += pieceEnd - cur;
+      if (rec.maxDb < (s.mx || 0)) rec.maxDb = s.mx || 0;
+      byDay.set(key, rec);
+      return pieceEnd;
+    });
+    // 会话数按起始日计
+    for (const s of list) {
+      const k = dayKey(new Date(s.s * 1000));
+      const rec = byDay.get(k);
+      if (rec) { rec.sessions += 1; byDay.set(k, rec); }
+    }
+    const activeDays = Array.from(byDay.values()).filter(v => v.sec >= 60).length;
+    const days = Array.from(byDay.keys()).sort();
+    let spanDays = 1;
+    if (days.length) {
+      spanDays = Math.round((startOfDay(new Date(days[days.length - 1]).getTime() / 1000) -
+                             startOfDay(new Date(days[0]).getTime() / 1000)) / 86400) + 1;
+    }
+    return {
+      total, loud, veryLoud, longest, peak,
+      avgDb: dbSeconds > 0 ? dbWeighted / dbSeconds : 0,
+      activeDays, spanDays, byDay,
+      count: list.length,
+      avgSession: list.length ? total / list.length : 0,
+      avgActiveDay: activeDays ? total / activeDays : 0,
+      avgAllDay: total / Math.max(spanDays, 1)
+    };
+  }
+
+  // ---------- 卡片 ----------
+  function renderCards(st) {
+    const items = [
+      ['累计佩戴', fmtDur(st.total), st.spanDays + ' 天窗口 · ' + st.activeDays + ' 天有使用'],
+      ['佩戴次数', st.count + ' 次', '平均 ' + fmtDur(st.avgSession)],
+      ['使用天数', st.activeDays + ' 天', '最长单次 ' + fmtDur(st.longest)],
+      ['活跃日日均', fmtDur(st.avgActiveDay), '按全部天数 ' + fmtDur(st.avgAllDay)],
+      ['平均音量', st.avgDb > 0 ? Math.round(st.avgDb) + ' dB' : '—', '峰值 ' + (st.peak > 0 ? Math.round(st.peak) + ' dB' : '—')],
+      ['≥80 dB 时长', fmtDur(st.loud), st.total > 0 ? '占 ' + (st.loud / st.total * 100).toFixed(1) + '%' : '—']
+    ];
+    document.getElementById('cards').innerHTML = items.map(function (it) {
+      return '<div class="card"><div class="ct">' + it[0] + '</div><div class="cv">' + it[1] +
+             '</div><div class="cs">' + it[2] + '</div></div>';
+    }).join('');
+  }
+
+  // ---------- 每日柱状 ----------
+  function renderDaily(st, list) {
+    const keys = Array.from(st.byDay.keys()).sort();
+    const host = document.getElementById('daily');
+    const axis = document.getElementById('axis');
+    if (!keys.length) { host.innerHTML = '<div class="empty">无数据</div>'; axis.innerHTML = ''; return; }
+    // 补齐中间空缺的日期
+    const first = new Date(keys[0] + 'T00:00:00');
+    const last = new Date(keys[keys.length - 1] + 'T00:00:00');
+    const series = [];
+    for (let d = new Date(first); d <= last; d.setDate(d.getDate() + 1)) {
+      const k = dayKey(d);
+      const rec = st.byDay.get(k);
+      series.push({ key: k, date: new Date(d), sec: rec ? rec.sec : 0, n: rec ? rec.sessions : 0 });
+    }
+    const maxVal = Math.max.apply(null, series.map(s => s.sec).concat([1]));
+    host.innerHTML = series.map(function (s) {
+      const pct = Math.max(s.sec > 0 ? 1.5 : 0.6, s.sec / maxVal * 100);
+      const weekend = [0, 6].includes(s.date.getDay());
+      const label = (s.date.getMonth() + 1) + '/' + s.date.getDate() + ' ' + WEEK[s.date.getDay()];
+      const tip = label + '　' + fmtDur(s.sec) + (s.n ? '　' + s.n + ' 次' : '');
+      return '<div class="bar' + (weekend ? ' weekend' : '') + '" style="height:' + pct +
+             '%" title="' + esc(tip) + '"></div>';
+    }).join('');
+    // 每根柱子一格，按需标注日期，保证刻度与柱体对齐
+    const step = Math.max(1, Math.ceil(series.length / 8));
+    axis.style.gridTemplateColumns = 'repeat(' + series.length + ', minmax(0, 1fr))';
+    axis.innerHTML = series.map(function (s, i) {
+      if (i % step !== 0) return '<span></span>';
+      return '<span>' + (s.date.getMonth() + 1) + '/' + s.date.getDate() + '</span>';
+    }).join('');
+  }
+
+  // ---------- 热力图 ----------
+  function renderHeat(list) {
+    const grid = [];
+    for (let r = 0; r < 7; r++) grid.push(new Array(24).fill(0));
+    walkSpans(list, function (cur, spanEnd) {
+      const d = new Date(cur * 1000);
+      const hourEnd = new Date(d.getFullYear(), d.getMonth(), d.getDate(), d.getHours() + 1).getTime() / 1000;
+      const pieceEnd = Math.min(spanEnd, hourEnd);
+      grid[d.getDay()][d.getHours()] += pieceEnd - cur;
+      return pieceEnd;
+    });
+    let max = 0;
+    grid.forEach(row => row.forEach(v => { if (v > max) max = v; }));
+    let html = '<div class="hd"></div>';
+    for (let h = 0; h < 24; h++) html += '<div class="hd">' + (h % 3 === 0 ? h : '') + '</div>';
+    for (let r = 0; r < 7; r++) {
+      html += '<div class="rh">' + WEEK[r].slice(1) + '</div>';
+      for (let h = 0; h < 24; h++) {
+        const v = grid[r][h];
+        const ratio = max > 0 ? v / max : 0;
+        const opacity = v <= 0 ? 0.05 : 0.14 + ratio * 0.78;
+        const tip = WEEK[r] + ' ' + h + ':00 – ' + (h + 1) + ':00　' + (v > 0 ? fmtDur(v) : '无');
+        html += '<div class="cell" style="opacity:' + opacity.toFixed(3) + '" title="' + esc(tip) + '"></div>';
+      }
+    }
+    document.getElementById('heat').innerHTML = html;
+    const foot = document.getElementById('heatfoot');
+    if (foot) foot.innerHTML = '';
+  }
+
+  // ---------- 音量分布 ----------
+  function renderVolume(list) {
+    const bins = [];
+    for (let lo = 40; lo < 100; lo += 5) bins.push({ lo: lo, sec: 0 });
+    for (const s of list) {
+      const dur = s.d;
+      if (s.b && s.b.length === bins.length) {
+        for (let i = 0; i < bins.length; i++) bins[i].sec += s.b[i] || 0;
+      } else if (s.db > 0) {
+        const db = Math.min(99.9, Math.max(40, s.db));
+        const idx = Math.min(bins.length - 1, Math.max(0, Math.floor((db - 40) / 5)));
+        bins[idx].sec += dur;
+      }
+    }
+    const visible = bins.filter(b => b.sec > 0);
+    const host = document.getElementById('volume');
+    if (!visible.length) { host.innerHTML = '<div class="empty">没有音量数据</div>'; return; }
+    const max = Math.max.apply(null, visible.map(b => b.sec));
+    host.innerHTML = '<div class="vbars">' + visible.map(function (b) {
+      const label = b.lo + '–' + (b.lo + 5) + ' dB';
+      return '<div class="vrow"><span class="vlabel">' + label + '</span>' +
+             '<span class="vtrack"><span class="vfill' + (b.lo >= 80 ? ' loud' : '') +
+             '" style="width:' + (max > 0 ? b.sec / max * 100 : 0).toFixed(1) + '%"></span></span>' +
+             '<span class="vvalue">' + fmtDur(b.sec) + '</span></div>';
+    }).join('') + '</div><div class="muted" style="margin-top:10px">按每条音频样本的实际音量累计；红色为 ≥80 dB 区间。</div>';
+  }
+
+  // ---------- 表格 ----------
+  function renderTable(list) {
+    const top = list.slice().sort((a, b) => b.d - a.d).slice(0, 30);
+    const host = document.getElementById('table');
+    if (!top.length) { host.innerHTML = '<div class="empty">无记录</div>'; return; }
+    let html = '<table><thead><tr><th>时间</th><th class="num">时长</th><th class="num">平均</th>' +
+               '<th class="num">峰值</th><th>设备</th></tr></thead><tbody>';
+    for (const s of top) {
+      const a = new Date(s.s * 1000), b = new Date(s.e * 1000);
+      const dateText = (a.getMonth() + 1) + '月' + a.getDate() + '日 ' + WEEK[a.getDay()] + ' ' +
+                       String(a.getHours()).padStart(2, '0') + ':' + String(a.getMinutes()).padStart(2, '0') +
+                       '–' + String(b.getHours()).padStart(2, '0') + ':' + String(b.getMinutes()).padStart(2, '0');
+      html += '<tr><td>' + dateText + '</td>' +
+              '<td class="num">' + fmtDur(s.d) + '</td>' +
+              '<td class="num">' + (s.db > 0 ? Math.round(s.db) + ' dB' : '—') + '</td>' +
+              '<td class="num' + (s.mx >= 90 ? ' hot' : '') + '">' + (s.mx > 0 ? Math.round(s.mx) : '—') + '</td>' +
+              '<td class="muted">' + esc(s.src) + '</td></tr>';
+    }
+    host.innerHTML = html + '</tbody></table>';
+  }
+
+  // ---------- 结论 ----------
+  function renderInsights(st, list) {
+    const out = [];
+    if (!list.length) { document.getElementById('insights').innerHTML = '<li class="empty">这段时间没有佩戴记录</li>'; return; }
+    out.push('这段时间累计戴耳机 ' + fmtDur(st.total) + '，平均每天 ' + fmtDur(st.avgAllDay) + '。');
+
+    // 高峰小时
+    const hour = new Array(24).fill(0);
+    walkSpans(list, function (cur, spanEnd) {
+      const d = new Date(cur * 1000);
+      const hourEnd = new Date(d.getFullYear(), d.getMonth(), d.getDate(), d.getHours() + 1).getTime() / 1000;
+      const pieceEnd = Math.min(spanEnd, hourEnd);
+      hour[d.getHours()] += pieceEnd - cur;
+      return pieceEnd;
+    });
+    let peakHour = 0;
+    for (let h = 1; h < 24; h++) if (hour[h] > hour[peakHour]) peakHour = h;
+    if (hour[peakHour] > 60) {
+      out.push(String(peakHour).padStart(2, '0') + ':00–' + String(peakHour + 1).padStart(2, '0') +
+               ':00 是最常戴耳机的时段，累计 ' + fmtDur(hour[peakHour]) + '。');
+    }
+
+    // 最勤的星期
+    const weekday = new Array(7).fill(0);
+    walkSpans(list, function (cur, spanEnd) {
+      const d = new Date(cur * 1000);
+      const pieceEnd = Math.min(spanEnd, nextDayStart(cur));
+      weekday[d.getDay()] += pieceEnd - cur;
+      return pieceEnd;
+    });
+    let peakDay = 0;
+    for (let i = 1; i < 7; i++) if (weekday[i] > weekday[peakDay]) peakDay = i;
+    if (weekday[peakDay] > 60) out.push(WEEK[peakDay] + '用得最多，累计 ' + fmtDur(weekday[peakDay]) + '。');
+
+    // 音量
+    if (st.avgDb > 0) {
+      const ratio = st.total > 0 ? st.loud / st.total * 100 : 0;
+      if (st.avgDb >= 80) {
+        out.push('平均音量 ' + Math.round(st.avgDb) + ' dB，属于偏高区间；把音量降 10 dB，同等时长下的听力负担会明显下降。');
+      } else if (ratio >= 10) {
+        out.push('平均音量 ' + Math.round(st.avgDb) + ' dB 还算克制，但有 ' + ratio.toFixed(0) +
+                 '% 的时间超过 80 dB（合计 ' + fmtDur(st.loud) + '）。');
+      } else {
+        out.push('平均音量 ' + Math.round(st.avgDb) + ' dB，超过 80 dB 的时长占 ' + ratio.toFixed(0) + '%，整体不错。');
+      }
+    }
+
+    // 90 dB 以上
+    if (st.veryLoud > 600) {
+      out.push('有 ' + fmtDur(st.veryLoud) + '音量超过 90 dB；在「设置 › 声音与触感 › 耳机安全」里打开「降低高音量」会稳妥一些。');
+    }
+
+    // 最长一次
+    const longest = list.reduce((a, b) => b.d > a.d ? b : a, list[0]);
+    if (longest && longest.d > 600) {
+      const d = new Date(longest.s * 1000);
+      out.push('最长的一次是 ' + (d.getMonth() + 1) + '月' + d.getDate() + '日 ' + WEEK[d.getDay()] + ' ' +
+               String(d.getHours()).padStart(2, '0') + ':' + String(d.getMinutes()).padStart(2, '0') +
+               '，连续戴了 ' + fmtDur(longest.d) + '。');
+    }
+
+    // 连续天数
+    const activeDays = Array.from(st.byDay.entries())
+      .filter(e => e[1].sec >= 60).map(e => e[0]).sort();
+    if (activeDays.length > 2) {
+      let best = 1, run = 1;
+      for (let i = 1; i < activeDays.length; i++) {
+        const a = new Date(activeDays[i - 1] + 'T00:00:00'), b = new Date(activeDays[i] + 'T00:00:00');
+        run = (Math.round((b - a) / 86400000) === 1) ? run + 1 : 1;
+        if (run > best) best = run;
+      }
+      let cur = 1;
+      for (let i = activeDays.length - 1; i > 0; i--) {
+        const a = new Date(activeDays[i - 1] + 'T00:00:00'), b = new Date(activeDays[i] + 'T00:00:00');
+        if (Math.round((b - a) / 86400000) !== 1) break;
+        cur++;
+      }
+      let text = '最长连续 ' + best + ' 天都戴了耳机';
+      if (cur >= 3) text += '，目前已经连续 ' + cur + ' 天';
+      out.push(text + '。');
+    }
+
+    // 最近一周 vs 前一周
+    function sumInWindow(from, to) {
+      let total = 0;
+      for (const s of list) for (const sp of spansOf(s)) {
+        const a = Math.max(sp[0], from), b = Math.min(sp[1], to);
+        if (b > a) total += b - a;
+      }
+      return total;
+    }
+    const lastTs = list.reduce((a, s) => Math.max(a, s.e), 0);
+    const week = 7 * 86400;
+    const thisWeek = sumInWindow(lastTs - week, lastTs);
+    const prevWeek = sumInWindow(lastTs - 2 * week, lastTs - week);
+    if (prevWeek > 300 && thisWeek > 0) {
+      const delta = (thisWeek - prevWeek) / prevWeek * 100;
+      if (Math.abs(delta) >= 8) {
+        out.push('最近 7 天 ' + fmtDur(thisWeek) + '，比前一周' +
+                 (delta > 0 ? '多了 ' + Math.abs(delta).toFixed(0) + '%' : '少了 ' + Math.abs(delta).toFixed(0) + '%') + '。');
+      }
+    }
+
+    document.getElementById('insights').innerHTML = out.map(t => '<li>' + t + '</li>').join('');
+  }
+
+  // ---------- 主流程 ----------
+  function render() {
+    const list = inRange();
+    const st = computeStats(list);
+    renderCards(st);
+    renderInsights(st, list);
+    renderDaily(st, list);
+    renderHeat(list);
+    renderVolume(list);
+    renderTable(list);
+  }
+
+  document.getElementById('meta').textContent =
+    '数据源 ' + META.file + '　·　' + META.generated + ' 生成　·　' +
+    '相邻样本间隔 ≤ ' + META.gap + ' 秒视为同一次佩戴　·　共 ' + SESSIONS.length + ' 次佩戴记录';
+
+  document.getElementById('rangebar').addEventListener('click', function (e) {
+    const btn = e.target.closest('button');
+    if (!btn) return;
+    range = btn.dataset.range;
+    Array.from(this.children).forEach(b => b.classList.toggle('on', b === btn));
+    render();
+  });
+
+  document.getElementById('footer').textContent =
+    '由 podsstat 生成。时间按本机时区显示；本文件只含聚合结果与每次佩戴的起止时间，不含原始健康记录。';
+
+  render();
+})();
+</script>
+</body>
+</html>
