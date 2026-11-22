@@ -1,3 +1,5 @@
+> 拖入 `export.zip` 就地出报告的网页版：https://clear-train.github.io/podsstats-lite/
+
 # PodsStat
 
 从 Apple 健康的「耳机音量」记录里，统计你到底戴了多久、什么时候戴、开多大声。
